@@ -1,8 +1,3 @@
-/**************************
- *    Author  : Adi       *
- *    Reviwer : Shadad    *
- *    Status  :  Approve  *
- **************************/
 
 #include <stdio.h> /* printf */
 #include <string.h> /* memcpy*/

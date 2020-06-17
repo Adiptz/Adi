@@ -6,13 +6,6 @@
 const int CAPACITY_SIZE_TO_DECREASE = 4; /*if new size is quarter of capacity*/
 const int DECREASE_CAPACITY = 2; /*decrease capacity by half*/
 
-/************************************
-*	ex : data structures vector		*
-*	author: Daya					*
-*	reviewer: Maya 					*
-*	revision : 1					*
-*	status : A						*
-*************************************/
 
 struct vector
 {

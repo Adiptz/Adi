@@ -1,0 +1,24 @@
+@import "header", "new_post_modal", "post", "search_bar", "add_post_button", "footer";
+
+main {
+  white-space: pre-line;
+}
+
+body {
+  background: rgba(55, 57, 53, 0.91);
+  background-size: contain;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+}
+
+
+.hidden_class {
+  display: none;
+}
+
+.shown_class {
+  display: block;
+}

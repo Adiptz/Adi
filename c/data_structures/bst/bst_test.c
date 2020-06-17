@@ -326,7 +326,7 @@ int main()
 	ForEach_test();
 	puts("");
 	PrintLevels_test();
-	printf("\nVOVA THE QUEEN\n");
+	printf("\nTest Done\n");
 	
 	return 0;
 }	

@@ -1,8 +1,3 @@
-/**********************
- * Author : Adi       *
- * Reviewer : Shieber *
- * Status : Sent      *
- **********************/
 
 #include <assert.h> /* assert */
 

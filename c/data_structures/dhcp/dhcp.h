@@ -1,10 +1,3 @@
-/*********************************
- * Title       : Heap            *
- * Group       : OL712           *
- * Version     : 1.4             *
- * Last update : 10.10.2019      *
- ********************************/
- 
 #ifndef ILRD_DHCP_H
 #define ILRD_DHCP_H
 

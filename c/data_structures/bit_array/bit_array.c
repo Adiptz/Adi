@@ -1,9 +1,3 @@
-/**************************
- *   Author   : Adi       *
- *   Reviewer : Shieber   *
- *	 Status   : Sent      *
- **************************/
-
 #include <assert.h> /* assert */
 #include <limits.h> /* CHAR_BIT : in MACRO */
 #include "bit_array.h"

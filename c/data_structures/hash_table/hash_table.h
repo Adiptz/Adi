@@ -1,10 +1,4 @@
-/****************************************
- * Title       : Hash Table             *
- * Author      : Vladimir               *
- * Group       : OL712                  *
- * Version     : 1.2                    *
- * Last update : 29.09.2019 09:29       *
- ****************************************/
+
 #ifndef __ILRD_HASH_TABLE_H
 #define __ILRD_HASH_TABLE_H
 

@@ -1,8 +1,3 @@
-/**********************
- * Author  : Adi      *
- * Reviwer : Liliya   *
- * Status  : Fixnig   *
- **********************/
 
 #define UNUSED(x) (void)(x) 
 

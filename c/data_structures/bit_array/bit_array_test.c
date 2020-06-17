@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include "bit_array.h"
 
-/**************************
- *    Author  : Adi       *
- *    Reviwer : Shieber   *
- *    Status  :  Sent     *
- **************************/
 
 /********************************* -- IS BIT SET -- **********************************/
 void IsBitSet_Test()

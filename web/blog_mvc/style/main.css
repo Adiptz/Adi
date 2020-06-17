@@ -1,0 +1,301 @@
+header {
+  opacity: 1;
+  padding: 8em;
+  background: url("https://images.unsplash.com/photo-1458324124043-7803d4fec380?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=df280ed170d2a9e25506f2d3db42f4f9") no-repeat;
+  background-size: cover;
+}
+
+.about_me {
+  position: relative;
+  color: #fff;
+  font: 900 60px Montserrat;
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about_me::after {
+  content: "";
+  clear: both;
+}
+
+.icon {
+  height: 60px;
+  margin-right: 20px;
+}
+.icon:hover {
+  opacity: 0.4;
+}
+.icon::after {
+  content: "";
+  clear: both;
+}
+
+hr {
+  margin-bottom: 20px;
+  border-color: rebeccapurple;
+  width: 100%;
+}
+
+hr::after {
+  content: "";
+  clear: both;
+}
+
+#edit_screen {
+  background: rgba(0, 0, 0, 0.5);
+  margin-left: auto;
+  width: 98vw;
+  height: 100vh;
+  position: inherit;
+}
+
+#hidden_edit_new_post {
+  display: none;
+}
+
+#hidden_black_cover {
+  display: none;
+}
+
+#black_cover {
+  z-index: 1;
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+#edit_new_post {
+  border: 1px solid rebeccapurple;
+  border-radius: 20px 20px 20px 20px;
+  background: #5e605c;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30vh;
+  padding-bottom: 15px;
+  height: 500px;
+  width: 500px;
+  opacity: 1;
+}
+
+#show_edit_new_post {
+  display: block;
+}
+
+#title_new_post {
+  padding-left: 20px;
+  display: block;
+  height: 6%;
+  width: 80%;
+  margin-top: 20px;
+  border: 3px solid rebeccapurple;
+  border-radius: 10px 10px 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+#title_new_post:focus {
+  outline: none;
+  border: 3px solid rebeccapurple;
+}
+
+#body_new_post {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: block;
+  margin: 20px auto;
+  height: 70%;
+  width: 80%;
+  border: 3px solid rebeccapurple;
+  border-radius: 10px 10px 10px 10px;
+  resize: none;
+  font-size: 20px;
+}
+#body_new_post:focus {
+  outline: none;
+}
+
+#publish_button, #cancel_button {
+  color: white;
+  font-weight: bold;
+  background: rebeccapurple;
+  margin-left: 40%;
+  width: 25%;
+  height: 5%;
+  border: solid white 1px;
+  border-radius: 5px 5px 5px 5px;
+}
+#publish_button:hover, #cancel_button:hover {
+  cursor: pointer;
+}
+
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  opacity: 0.8;
+  background: #cccccc;
+  border: 3px solid rebeccapurple;
+  border-radius: 10px;
+  margin: 4% auto auto;
+  width: 60%;
+  cursor: grab;
+}
+.post h3, .post p {
+  margin-left: 2vw;
+  border: none;
+  color: black;
+  font-weight: bolder;
+  font-size: x-large;
+  width: 100%;
+}
+
+.post p {
+  font-weight: normal;
+  overflow: auto;
+}
+
+article:hover {
+  box-shadow: 0 10px 70px aliceblue;
+}
+article:first-child {
+  margin-top: 3%;
+}
+
+.share_image {
+  width: 10px;
+}
+
+.share_div {
+  width: 100%;
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+#edit_button,
+#delete_button {
+  background: transparent;
+  border: none;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  outline: none;
+}
+#edit_button:hover,
+#delete_button:hover {
+  cursor: pointer;
+}
+
+#edit_image,
+#delete_image {
+  height: 35px;
+}
+
+#hrPost {
+  width: 97%;
+  margin-top: 40px;
+}
+
+.search {
+  text-align: center;
+  display: flex;
+  margin: auto;
+  width: 35%;
+  border-color: white;
+}
+
+#user_search {
+  height: 35px;
+  border: 4px solid #373935;
+  padding-left: 10px;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #1c0b6a;
+  font-weight: bold;
+  flex: 2;
+}
+
+.search_button {
+  height: 44px;
+  border: 3px solid #373935;
+  border-left: none;
+  background: #636561;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.search_bar {
+  width: 60%;
+  border-radius: 0 5px 5px 0;
+  margin-left: 50%;
+  margin-right: 10%;
+  margin-top: 3%;
+  transform: translate(-50%, -50%);
+}
+
+#add_button_container {
+  position: sticky;
+  margin-left: 94%;
+  bottom: 10px;
+}
+
+#add_button {
+  background: transparent;
+  position: relative;
+  bottom: 4vh;
+  border: none;
+  height: 80px;
+  width: 80px;
+}
+#add_button:focus {
+  outline: none;
+}
+#add_button:hover {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #452266;
+  height: 40px;
+  font-size: x-large;
+  color: antiquewhite;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  white-space: pre-line;
+}
+
+body {
+  background: rgba(55, 57, 53, 0.91);
+  background-size: contain;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+}
+
+.hidden_class {
+  display: none;
+}
+
+.shown_class {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

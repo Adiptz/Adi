@@ -1,0 +1,72 @@
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  opacity: 0.8;
+  background: #cccccc;
+  border: 3px solid rebeccapurple;
+  border-radius: 10px;
+  margin: 4% auto auto;
+  width : 60%;
+  cursor: grab;
+
+  h3, p {
+    margin-left: 2vw;
+    border: none;
+    color: black;
+    font-weight: bolder;
+    font-size: x-large;
+    width: 100%;
+  }
+
+}
+
+.post p {
+  font-weight: normal;
+  overflow: auto;
+}
+
+article {
+  &:hover {
+    box-shadow: 0 10px 70px aliceblue;
+  }
+
+  &:first-child {
+    margin-top: 3%;
+
+  }
+}
+
+.share_image {
+  width: 10px;
+}
+
+.share_div{
+  width: 100%;
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+#edit_button,
+#delete_button {
+  background: transparent;
+  border: none;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#edit_image,
+#delete_image {
+  height: 35px;
+}
+
+#hrPost{
+  width: 97%;
+  margin-top: 40px;
+}

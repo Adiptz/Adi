@@ -1,9 +1,4 @@
-/**************************
- *    Author  : Adi       *
- *    Reviwer : Daya      *
- *    Status  : Sent      *
- **************************/
- 
+
 #include <assert.h> /* assert */
 
 #include "uid.h"

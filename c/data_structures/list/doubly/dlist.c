@@ -1,8 +1,3 @@
-/**********************
- * Author : Adi       *
- * Reviewer : Dandan  *
- * Status : Sent      *
- **********************/
 
 #include <stdlib.h> /* sizeof, malloc, free */
 #include <assert.h> /* assert */

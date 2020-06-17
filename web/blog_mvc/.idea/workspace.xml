@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a3d9cda-d080-4ea7-9fc2-6a93f2ece833" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/data_structures/bst/tree_ops.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/data_structures/bst/tree_ops.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/data_structures/bst/tree_ops_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/data_structures/list/singly/slist_ops.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/data_structures/list/singly/slist_ops.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/data_structures/list/singly/slist_ops_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/memcpy_memset_memmove/memcpy.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/memcpy_memset_memmove/memcpy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/memcpy_memset_memmove/memcpy_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/calculator/calculator.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/calculator/calculator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/calculator/calculator_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/calculator/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/calculator.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/scheduler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/scheduler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/scheduler_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/task.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/task.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/projects/scheduler/task_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/Airplane.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/Fib.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/IsRotate.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/MacroLittleBigEndian.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/Math_Without_Operators.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/MaxSubArray.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/RecPermutate.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/Recursion.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/count_set_bit.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/hanoi_tower.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/quizzes/permutations.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/fsa/fsa.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/fsa/fsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/fsa/fsa_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/mapping_memory.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/ex1/design_ex1.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/ex1/pingpong.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/ex2/handler.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/ex2/ping.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/ex2/pong.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/signal_cmd_line.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/signal_parent_child.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/signal_try.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/ping_pong/stam.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/vsa/makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/vsa/vsa.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/vsa/vsa.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../c/system_programming/vsa/vsa_test.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/java2c/Java2c.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/java2c/java2c.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/java2c/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/linked_list/Iterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/linked_list/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/linked_list/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Ex1Subclass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Ex1Superclass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Ex9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Outer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Polymorphic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Reflection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Sub17.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/SubPoly.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Super17.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/object_oriented_intro/Useful.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/strings/Strings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/strings/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/vending_machine/Terminal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/vending_machine/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/vending_machine/VendingMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/vending_machine/ViewModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/avl/avl.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/avl/avl.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/avl/avl_dandantest.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/avl/avl_dandantest.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/avl/avl_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/avl/avl_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/bit_array/bit_array.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/bit_array/bit_array.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/bit_array/bit_array_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/bit_array/bit_array_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/bst/bst.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/bst/bst.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/bst/bst_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/bst/bst_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp_test.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp_test.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/hash_table/hash_table.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/hash_table/hash_table.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/hash_table/hash_table.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/hash_table/hash_table.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/heap/heap.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/heap/heap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/heap/heap_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/heap/heap_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/list/doubly/dlist.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/list/doubly/dlist.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/list/singly/slist.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/list/singly/slist.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/list/sorted/sorted_list.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/list/sorted/sorted_list.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/dhcp.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/dhcp/dhcp.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/dhcp.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/dhcp_test.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/dhcp_test.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/trie .h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/trie .h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/trie.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/trie.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/my_dhcp/trie.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/obj/dummy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/pqueue/pqueue.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/pqueue/pqueue.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/pqueue/pqueue_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/pqueue/pqueue_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/queue/queue.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/queue/queue.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/queue/queue_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/queue/queue_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/search/search.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/search/search.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/search/search.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/search/search.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/search/search_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/search/search_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/sorts/merge.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/sorts/merge.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/sorts/sorting.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/sorts/sorting.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/sorts/sorting.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/sorts/sorting.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/sorts/sorting_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/sorts/sorting_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/stack/stack.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/stack/stack.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/stack/vec.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/test/dummy.dm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/uid/uid.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/uid/uid.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/uid/uid_test.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/uid/uid_test.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../c/data_structures/vector/vector.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../c/data_structures/vector/vector.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1dQ55z108THhmO1lEsYUMrTJcvK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a3d9cda-d080-4ea7-9fc2-6a93f2ece833" name="Default Changelist" comment="" />
+      <created>1592344296902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592344296902</updated>
+      <workItem from="1592344298088" duration="1623000" />
+      <workItem from="1592381232858" duration="2346000" />
+      <workItem from="1592404213371" duration="763000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="538" y="276" width="900" height="553" key="EditFileWatcherDialog" timestamp="1592381583743">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="538" y="276" width="900" height="553" key="EditFileWatcherDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1592381583743" />
+    <state x="1106" y="253" width="530" height="598" key="FileChooserDialogImpl" timestamp="1592382419718">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="1106" y="253" width="530" height="598" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1592382419718" />
+  </component>
+</project>

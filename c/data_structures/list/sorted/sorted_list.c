@@ -1,9 +1,3 @@
-/**************************
- *    Author  : Adi       *
- *    Reviwer : Daya      *
- *    Status  : Sent      *
- **************************/
- 
 /****************************** -- LIBARIES -- ********************************/
 #include <stdlib.h> /* malloc, free */
 #include <assert.h> /* assert */
@@ -19,7 +13,7 @@ struct sorted_list
 	void *param;
 };
 
-typedef struct patch /*TODO : give informative name */
+typedef struct patch 
 {
 	void *user_data;
 	void *user_param;
@@ -208,8 +202,7 @@ sorted_list_t *SortedListMerge(sorted_list_t *list_dest,
 	curr_dest = SortedListBegin(list_dest);
 	end_src = SortedListEnd(list_src);
 	end_dest =  SortedListEnd(list_dest);
-	
-	/* if there's nothing to merge  TODO */
+
 	if(SortedListIsEmpty(list_src))
 	{
 		return list_dest;

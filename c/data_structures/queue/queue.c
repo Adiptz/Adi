@@ -1,9 +1,4 @@
-/**********************
- * Author : Adi       *
- * Reviewer : Shieber *
- * Status : Sent      *
- **********************/
- 
+
 #include <assert.h> /* assert */
 #include <stdlib.h> /* malloc, free */
 
@@ -33,8 +28,7 @@ queue_t *QueueCreate(void)
 	}
 	
 	/* queue struct initalization */
-	ptr_queue->dummy_end = /*TODO try return NULL*/
-	SListCreateNode(NULL ,NULL); 
+	ptr_queue->dummy_end =	SListCreateNode(NULL ,NULL); 
 	ptr_queue->head = ptr_queue->dummy_end;
 	ptr_queue->size = 0;
 	

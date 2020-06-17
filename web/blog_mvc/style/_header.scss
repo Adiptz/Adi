@@ -1,0 +1,50 @@
+header{
+  opacity: 1;
+  padding: 8em;
+  background: url("https://images.unsplash.com/photo-1458324124043-7803d4fec380?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=df280ed170d2a9e25506f2d3db42f4f9") no-repeat;
+  background-size: cover;
+}
+
+
+
+.about_me {
+  //font-family: 'Ubuntu', sans-serif;
+  //color: white;
+  //text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    position: relative;
+    color: #fff;
+    font: 900 60px Montserrat;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about_me::after {
+  content: "";
+  clear: both;
+}
+
+.icon {
+  height: 60px;
+  margin-right: 20px;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &::after {
+    content: "";
+    clear: both;
+  }
+}
+
+hr {
+  margin-bottom: 20px;
+  border-color: rebeccapurple;
+  width: 100%;
+}
+
+hr::after {
+  content: "";
+  clear: both;
+}
+

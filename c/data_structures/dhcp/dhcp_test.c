@@ -1,7 +1,3 @@
-
-#include <limits.h>
-#include <string.h>
-#include <math.h>
 #include "dhcp_test.h" /* colors and libraries */
 
 /******************************************************************************/

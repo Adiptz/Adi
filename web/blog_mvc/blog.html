@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>My Blog</title>
+        <!--            <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">-->
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <script type="module" src="./main.js"></script>
+    </head>
+
+    <body>
+
+        <header align="center">
+            <!--            <section class="avatar">-->
+            <!--                <img src="images/avatar.png" id="avatar">-->
+            <!--            </section>-->
+
+            <section class="about_me">
+                <h1> My Name Is Adi </h1>
+                <h3> I'm Looking For My First Job</h3>
+            </section>
+
+            <div class="social_media">
+                <nav>
+                    <a href="https://www.facebook.com" target="_blank"><img class="icon facebook_icon"
+                                                                            src="images/icons/facebook.png"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img class="icon instagram_icon"
+                                                                             src="images/icons/instagram.png"></a>
+                    <a href="https://www.youtube.com" target="_blank"><img class="icon youtube_icon"
+                                                                           src="images/icons/youtube.png"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img class="icon twitter_icon"
+                                                                           src="images/icons/twitter.png"></a>
+                </nav>
+            </div>
+        </header>
+        <hr>
+
+        <div class="separator"></div>
+
+        <form class="search">
+            <input type="text" id="user_search" placeholder="What are you looking for?">
+            <button type="submit" class="search_button">search</button>
+        </form>
+
+        <div id="hidden_black_cover">
+            <form id="hidden_edit_new_post"><br>
+                <input id="title_new_post">
+                <textarea id="body_new_post"></textarea>
+                <button id="publish_button">POST</button>
+                <br>
+            </form>
+            <br>
+        </div>
+
+        <div class="separator"></div>
+
+
+        <main>
+            <div id="all_posts"></div>
+        </main>
+
+        <div id="add_button_container">
+            <button id="add_button"><img src="images/buttons/add.png" style="width:100%" alt=""></button>
+        </div>
+
+    </body>
+
+    <footer>
+        Made By Adi
+    </footer>
+</html>

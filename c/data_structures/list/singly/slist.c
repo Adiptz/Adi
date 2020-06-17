@@ -1,8 +1,3 @@
-/*************************
- * Author   :  Adi       *
- * Reviewer :  Daya      *
- * Status   :  Approved  *
- *************************/
 
 #include <stdlib.h> /* malloc, free */
 #include <assert.h> /* assert */
@@ -168,22 +163,6 @@ slist_node_t *SListFlip(slist_node_t *head)
 }
 
 
-/*slist_node_t *SListFlip(slist_node_t *head)*/
-/*{*/
-/*	slist_node_t *after_head = head->next_node;	*/
-/*	*/
-/*	if (NULL == after_head)*/
-/*	{*/
-/*		return head;*/
-/*	}*/
-/*	*/
-/*	*/
-/*	SListFlip(after_head);*/
-/*	*/
-/*	return head->next;*/
-/*}*/
-
-
 /******************************* -- LOOP -- ***********************************/
 int SListHasLoop(const slist_node_t *head)
 {
@@ -239,26 +218,5 @@ slist_node_t *SListFindIntersection
 	return (slist_node_t *)node1;
 
 
-	/* O(n^2)
-	slist_node_t *list1 = (slist_node_t *)node1;
-	slist_node_t *list2 = (slist_node_t *)node2;
-	slist_node_t *list2_original = list2;
-	
-	for(list1 = list1; NULL != list1; list1 = list1->next_node)
-	{
-		for(list2 = list2_original; NULL != list2; list2 = list2->next_node)
-		{
-			if(list1 == list2 && (list1 == node1 || list1 == node2))
-			{
-				return NULL;
-			}
-			else if(list1 == list2)
-			{
-				return list1;
-			}
-		}
-	}
-
-	return NULL;*/
 }									
 

@@ -1,9 +1,3 @@
-/****************************************
- * Title  : Sorting    					*
- * Author : Ran Shieber                 *
- * Group  : OL712                       *
- * Date   : 08/09/2019               	*
- ****************************************/
 
 #ifndef __ILRD_OL712_SORTING_H
 #define __ILRD_OL712_SORTING_H

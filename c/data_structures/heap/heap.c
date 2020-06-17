@@ -1,12 +1,3 @@
-/**********************************
- *                                *
- *     Author   : Adi Peretz      *
- *     Reviewer : Daya Dotan      *
- *     Group    :    OL712        *
- *     Status   : Approved        *
- *                                *
- **********************************/
-
 #include <assert.h> /* assert */
 #include <stdlib.h> /* malloc, free */
 

@@ -330,19 +330,6 @@ void BSearchRecursive_test_simple_odd()
 	expect_int(*result, key, "BSearchRecursive_test1");
 }
 
-/*void BSearchRecursive_test_simple_even()*/
-/*{*/
-/*	int arr[] = {2,4,8,10,12,14};*/
-/*	*/
-/*	int key = 12;*/
-
-/*	size_t elm_size = sizeof(arr[0]);	*/
-/*	size_t nitems = sizeof(arr)/sizeof(arr[0]);*/
-/*	*/
-/*	int *result = BSearchRecursive(&key, arr, nitems, elm_size, IntCmp);*/
-/*	*/
-/*	expect_int(*result, key, "BSearchRecursive_test1");*/
-/*}*/
 
 void BSearchRecursive_test_simple_even()
 {

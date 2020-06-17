@@ -1,5 +1,5 @@
 #include <assert.h> /* assert */
-#include <stdio.h> /* FIXME */
+#include <stdio.h> 
 #include <stdlib.h> /* malloc, free */
 #include <string.h> /* memcpy */
 

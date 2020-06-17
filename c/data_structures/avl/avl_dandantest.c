@@ -1,10 +1,3 @@
-/****************************
- * Author: Dandan Ogni		*
- * Reviewer: 				*
- * Revision: 				*
- * Status: 					*
- ****************************/
-
 /******************************************************************************/
 
 /****************
@@ -87,11 +80,10 @@ static int ReturnDataIfParamIsZeroElseSubParam(void *data, void *param);
 
 int main()
 {
-	ExpectMain(CheckIsEmpty(), "IsEmpty"); /*TODO A*/
+	ExpectMain(CheckIsEmpty(), "IsEmpty");
 	ExpectMain(CheckCount(), "Count"); 
 	ExpectMain(CheckFind(), "Find"); 
 	ExpectMain(CheckForEach(), "ForEach"); 
-/*	ExpectMain(CheckHeight(), "Height");*/
 
 	return 0;
 }

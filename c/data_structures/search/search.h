@@ -1,9 +1,3 @@
-/****************************************
- * Title  : search    					*
- * Author : Dandan Ogni                 *
- * Group  : OL712                       *
- * Date   : 07/10/2019               	*
- ****************************************/
 
 #ifndef __ILRD_OL712_SEARCH_H
 #define __ILRD_OL712_SEARCH_H

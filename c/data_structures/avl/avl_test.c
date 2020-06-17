@@ -199,7 +199,7 @@ static void RemoveEmpty()
 
 int main()
 {
-	printf("VOVA THE QUEEN\n");
+	printf("Test\n");
 
 	Create_Destroy_Test();
 	Insert_By_Oreder_Test();

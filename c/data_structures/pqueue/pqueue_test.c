@@ -1,8 +1,4 @@
-/**********************
- * Author   : Adi     *
- * Reviewer : Giveret *
- * Status   : Sent    *
- **********************/
+
 
 #include <stdio.h>
 #include <assert.h>
@@ -122,7 +118,7 @@ int main()
 	Erase_test();
 	Clear_test();
 	
-	puts("VOVA THE QUEEN");
+	puts("\n Test Done \n");
 
 	return 0;
 }

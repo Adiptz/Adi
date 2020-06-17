@@ -1,572 +1,395 @@
-/***************************
- * Author   : Hay Hoffman  *
- * Reviewer : Adi Peretz   *
- * Status   : Approve      *
- ***************************/
-/**************************************includes********************************/
-#include <assert.h> /*assert*/ /* XXX assert is the first include */
-#include <stdlib.h> /*malloc, free*/
-#include <limits.h> /*CHAR_BIT*/
-#include <string.h> /*memcpy*/
-#include "dhcp.h" /*dhcp API*/
-/**********************************defines*************************************/
-#define NUM_OF_CHILDREN (2)
-/**********************************typedefs************************************/
-typedef enum {LEFT, RIGHT} direction_t;
-typedef enum {NOT_EXIST, EXIST} path_t;
-typedef struct node node_t;
-typedef struct alloc_parms parms_t; 
-typedef unsigned char uchar;
-typedef unsigned int uint; 
-/*****************************structs declerations*****************************/
-struct node 
+
+
+#include <assert.h> /* assert */
+#include <stdlib.h> /* malloc, free */
+#include <limits.h> /* CHAR_BIT, UCHAR_MAX */
+#include <string.h> /* memcpy */
+
+#include "dhcp.h"   /* dhcp_funcs */
+#include "trie.h"   /* trie funcs */
+
+struct dhcp
 {
-	node_t *children[NUM_OF_CHILDREN]; 
+	trie_node_t *root;
+	size_t available_ip_adresses;
+	size_t host_id_bits;
+	unsigned char net_id[BYTES_IN_IP];
 };
 
-struct dhcp 
-{
-	uint net_id; 
-	size_t host_bit_num;
-	size_t net_id_bit_num; 
-	node_t *root; 
-};
+/*****************************
+ **** service functions ******
+ *****************************/
 
-struct alloc_parms 
-{
-	uint traverse_mask; 
-	uint height; 
-	uint path; 
-};
-/***************************static functions declerations**********************/
-static dhcp_status_t InitDHCP(dhcp_t *dhcp, uchar *net_id, size_t n_bits_net_id);
-static dhcp_status_t InitRoot(dhcp_t *dhcp);
-static node_t *CreateNode(void);
-static void InitilizeTreePaths(dhcp_t *dhcp, uint path);
-static void CopyPathToIP(dhcp_t * dhcp, uchar *alloc_ip, uint path);
-static uint GetNetID(uchar *net_id, dhcp_t *dhcp);
-static uint IPArrToUint(uchar *ip);
-static size_t GetHostBitNum(dhcp_t *dhcp);
-static void RecDestroyAllNodes(node_t *node);
-static uint GetPath(dhcp_t *dhcp, uchar *ip);
-static node_t *GetRoot(dhcp_t *dhcp);
-static dhcp_status_t IterativeAlloc(dhcp_t* dhcp, uchar *alloc_ip);
-static uint GetMaxPath(dhcp_t *dhcp);
-static int IsNodeCreateNedded(node_t *node);
-static void CreatePath(parms_t parms, node_t *node);
-static uint GetTraverseMask(dhcp_t *dhcp);
-static parms_t InitParm(dhcp_t *dhcp, uchar *alloc_ip);
-static int IsPathExist(dhcp_t *dhcp, uint path);
-static direction_t GetDirection(parms_t parms);
-static node_t *RecRelease(node_t *node, parms_t parms);
-static size_t NumOfChilden(node_t *node);
-static int IsIllegalPath(dhcp_t *dhcp, uint path);
-static uint GetNBitMask(size_t n_bits);
-static size_t GetNetIDBitNum(dhcp_t *dhcp);
-static int IsLeaf(parms_t parms);
-static void UpdateTraverseParms(parms_t *parms, node_t **node);
-static dhcp_status_t ResetPathTravers(dhcp_t *dhcp, parms_t *parms
-														, node_t **node, uchar *alloc_ip);
-/*************************************DHCPCreate******************************/
-dhcp_t *DHCPCreate(unsigned char net_id[BYTES_IN_IP], size_t num_bits_net_id)
-{
-	dhcp_t *dhcp = NULL;
-	dhcp_status_t init_status = 0;
+/* initials */
+static int InitDhpcStruct(dhcp_t *new_dhcp,
+						  size_t net_id_bits, 
+						  const unsigned char *net_id);
+static void InitReserveIP(unsigned char *req_last_ip, 
+					      unsigned char *req_before_last_ip, 
+				   		  unsigned char *req_first_ip,
+				   		  const unsigned char *net_id,
+				   		  size_t net_id_bytes);
+				   		  
 
+/* aloc and realese ip */							
+static int AllocReserveIP(const unsigned char *net_id,
+			              size_t net_id_bits, 
+						  dhcp_t *new_dhcp);
+static int AllocReqIP(const unsigned char *req_ip,
+					  unsigned char *alloc_ip,
+					  dhcp_t *dhcp,
+					  size_t host_id_bytes);
+static int AllocNewIP(const unsigned char *req_ip,
+					  unsigned char *alloc_ip,
+					  dhcp_t *dhcp,
+					  size_t host_id_bytes);
+static int ReleaseIP(dhcp_t *dhcp,
+					 size_t host_id_bytes, 
+				     const unsigned char *ip_to_release);
+				  
+/* chekcing */
+static int IsSameNetID(size_t net_id_bytes,
+					   const unsigned char *req_ip, 
+					   const unsigned char *net_id);
+static int IsReservedHostIP(const unsigned char *host_id_to_release, 
+							const unsigned char *net_id,
+							size_t net_id_bytes);
+
+/*others */
+static void *FreeAndNULL(void *pointer_to_free);
+
+
+/******************************** -- CREATE -- ********************************/
+dhcp_t *DHCPCreate(unsigned char net_id[BYTES_IN_IP],
+				   size_t net_id_bits)
+{
+	dhcp_t *new_dhcp = NULL;
+	int alloc_status = 0;
+	int init_dhcp_status = 0;
+	
 	assert(NULL != net_id);
-
-	dhcp = (dhcp_t *)malloc(sizeof(*dhcp));
-	if (NULL == dhcp)
+	
+	new_dhcp = (dhcp_t *)malloc(sizeof(dhcp_t));
+	if (NULL == new_dhcp)
 	{
 		return NULL;
 	}
 
-	init_status = InitDHCP(dhcp, net_id, num_bits_net_id);
-	if (FAIL == init_status)
+	init_dhcp_status = InitDhpcStruct(new_dhcp, net_id_bits, net_id);
+	if (FAIL == init_dhcp_status)
 	{
-		free(dhcp); dhcp = NULL;
+		new_dhcp = FreeAndNULL(new_dhcp);
 		return NULL;
 	}
-
-	return dhcp;
+				  
+	alloc_status = AllocReserveIP(net_id, net_id_bits, new_dhcp);
+	if (FAIL == alloc_status)
+	{
+		DHCPDestroy(new_dhcp);
+		return NULL;
+	}
+	
+	return new_dhcp;
 }
 
-/*************************************InitDHCP*********************************/
-static dhcp_status_t InitDHCP(dhcp_t *dhcp, uchar *net_id, size_t n_bits_net_id)
+static int InitDhpcStruct(dhcp_t *new_dhcp, size_t net_id_bits, 
+						  const unsigned char *net_id)
 {
-	dhcp_status_t root_init = 0; 
-	
-	assert(NULL != dhcp);
-	
-	dhcp->net_id_bit_num = n_bits_net_id;
-	dhcp->host_bit_num = (BYTES_IN_IP * CHAR_BIT) - n_bits_net_id;
-	dhcp->net_id = GetNetID(net_id, dhcp);
-	
-	root_init = InitRoot(dhcp);
-	if (FAIL == root_init)
+	assert(NULL != new_dhcp);
+	assert(NULL != net_id);
+		
+	new_dhcp->root = TrieCreateNode(NULL);
+	if (NULL == new_dhcp->root)
 	{
 		return FAIL;
 	}
-
+	
+	new_dhcp->host_id_bits = BYTES_IN_IP * CHAR_BIT - net_id_bits;
+	new_dhcp->available_ip_adresses = 1 << new_dhcp->host_id_bits;
+	memcpy(new_dhcp->net_id , net_id, net_id_bits / CHAR_BIT);
 	
 	return SUCCESS;
 }
 
-/*************************************InitRoot**********************************/
-static dhcp_status_t InitRoot(dhcp_t *dhcp)
-{	
-	assert(NULL != dhcp);
-	
-	dhcp->root = CreateNode(); 
-	if (NULL == dhcp->root)
-	{
-		return FAIL;
-	}
-	
-	InitilizeTreePaths(dhcp, 0);
-	InitilizeTreePaths(dhcp, GetMaxPath(dhcp));
-	InitilizeTreePaths(dhcp,  GetMaxPath(dhcp) - 1);
-	
-	return SUCCESS; 
+static void *FreeAndNULL(void *pointer_to_free)
+{
+	free(pointer_to_free);
+	return NULL;
 }
 
-/*************************************CreateNode******************************/
-static node_t *CreateNode(void)
+static int AllocReserveIP(const unsigned char *net_id, size_t net_id_bits, 
+						  dhcp_t *dhcp)
 {
-	node_t * node= (node_t *)malloc(sizeof(*node));
-	if (NULL == node)
-	{
-		return NULL;
-	}
-	
-	node->children[LEFT] = NULL;
-	node->children[RIGHT] = NULL;
-	
-	return node; 
-}
-
-/*************************************InitilizeTreePaths*************************/
-static void InitilizeTreePaths(dhcp_t *dhcp, uint path)
-{
-	uchar ip[BYTES_IN_IP] = {0};
-	
-	assert(NULL != dhcp);
-	
-	CopyPathToIP(dhcp, ip, path);
-	IterativeAlloc(dhcp, ip);
-}
-
-/*********************************CopyPathToIP*********************************/
-static void CopyPathToIP(dhcp_t * dhcp, uchar *alloc_ip, uint path)
-{
-	uint u_alloc_ip = 0; 
-	uint mask = 0xff;
-	size_t i = BYTES_IN_IP; 
-	
-	assert(NULL != alloc_ip);
-	
-	u_alloc_ip = IPArrToUint(alloc_ip);
-	u_alloc_ip -= GetPath(dhcp, alloc_ip);
-	u_alloc_ip += path; 
-	
-	while (i--) 
-	{
-		alloc_ip[i] = u_alloc_ip & mask;
-		u_alloc_ip >>= CHAR_BIT;
-	}
-}
-
-/*************************************IPArrToUint*******************************/
-static uint IPArrToUint(uchar *ip) 
-{
-	size_t i = 0;
-	uint converted_ip = 0;
-
-	assert(NULL != ip);
-
-	for (i = 0; i < 4; ++i)
-	{
-		converted_ip <<= CHAR_BIT;
-		converted_ip += ip[i];
-	}
-
-	return converted_ip;
-}
-
-/************************************GetPath***********************************/
-static uint GetPath(dhcp_t *dhcp, uchar *ip)
-{
-	uint bit_mask = 0;
-	uint converted_ip = 0;
-	
-	assert(NULL != ip);
-	assert(NULL != dhcp);
-	
-	converted_ip = IPArrToUint(ip);
-	bit_mask = GetNBitMask (GetHostBitNum(dhcp));
-	
-	return bit_mask & converted_ip;
-}
-
-/*************************************GetNetID*********************************/
-static uint GetNetID(uchar *net_id, dhcp_t *dhcp)
-{
-	uint bit_mask = 0;
-	uint converted_ip = 0;
+	int lease_status = 0;
+	unsigned char req_last_ip[BYTES_IN_IP] = {0};
+	unsigned char req_before_last_ip[BYTES_IN_IP] = {0};
+	unsigned char req_first_ip[BYTES_IN_IP] = {0};
 	
 	assert(NULL != net_id);
 	assert(NULL != dhcp);
 	
-	converted_ip= IPArrToUint(net_id);
-	bit_mask = GetNBitMask(GetNetIDBitNum(dhcp));
-	
-	return (bit_mask & (converted_ip >> GetHostBitNum(dhcp)));
-}
-
-/*************************************GetNBitMask*****************************/
-static uint GetNBitMask(size_t n_bits)
-{
-	uint nbit_mask = 0; 
-	uint single_bit_mask = 1u;
-	size_t i = 0; 	
-	
-	for (i = 0; i < n_bits; ++i)
+	InitReserveIP(req_last_ip, req_before_last_ip, req_first_ip, net_id, 
+				  net_id_bits / CHAR_BIT);
+				  	
+	lease_status = DHCPLease(dhcp, req_last_ip, req_last_ip);
+	if (FAIL == lease_status)
 	{
-		nbit_mask |= single_bit_mask; 
-		single_bit_mask <<= 1;
-	}
-	
-	return nbit_mask;
-}
-
-/*************************************GetHostBitNum**************************/
-static size_t GetHostBitNum(dhcp_t *dhcp)
-{
-	assert(NULL != dhcp);
-	
-	return dhcp->host_bit_num;
-}
-
-/*************************************GetNetIDBitNum**************************/
-static size_t GetNetIDBitNum(dhcp_t *dhcp)
-{		
-	assert(NULL != dhcp);
-	
-	return dhcp->net_id_bit_num;
-}
-
-/*************************************DHCPDestroy*****************************/
-void DHCPDestroy(dhcp_t *dhcp) 
-{
-	assert(NULL != dhcp);
-	
-	RecDestroyAllNodes(dhcp->root);
-	free(dhcp); dhcp = NULL;
-}
-
-/*********************************RecDestroyAllNodes**************************/
-static void RecDestroyAllNodes(node_t *node)
-{
-	if (NULL == node)
-	{
-		return;  
+		return FAIL;
 	}
 
-	RecDestroyAllNodes(node->children[LEFT]);
-	RecDestroyAllNodes(node->children[RIGHT]);
-	free(node); node = NULL;
+	lease_status = DHCPLease(dhcp, req_before_last_ip, req_before_last_ip);
+	if (FAIL == lease_status)
+	{
+		return FAIL;
+	}
+
+	lease_status = DHCPLease(dhcp, req_first_ip, req_first_ip);
+	if (FAIL == lease_status)
+	{
+		return FAIL;
+	}
+	
+	return SUCCESS;
 }
 
-/*********************************DHCPLease**********************************/
-dhcp_status_t DHCPLease(dhcp_t *dhcp, 
-						const unsigned char req_ip[BYTES_IN_IP],
+static void InitReserveIP(unsigned char *req_last_ip, 
+				   		  unsigned char *req_before_last_ip, 
+				   		  unsigned char *req_first_ip,
+				   		  const unsigned char *net_id,
+				   		  size_t net_id_bytes)
+{
+	size_t i = 0;
+	
+	assert(NULL != req_last_ip);
+	assert(NULL != req_before_last_ip);
+	assert(NULL != req_first_ip);
+	assert(NULL != net_id);
+	
+	/*copying net_id to reserved IPs*/
+	for (i = 0; i < net_id_bytes; ++i)
+	{
+		req_last_ip[i] = net_id[i];
+		req_before_last_ip[i] = net_id[i];
+		req_first_ip[i] = net_id[i];
+	}
+	
+	/*fill host id of reserved IPs*/
+	for (i = i; i < BYTES_IN_IP; ++i)
+	{
+		req_last_ip[i] = UCHAR_MAX;
+		req_before_last_ip[i] = UCHAR_MAX;
+		req_first_ip[i] = 0;		
+	}
+	
+	req_before_last_ip[BYTES_IN_IP - 1] = UCHAR_MAX - 1; 
+}
+
+/******************************* -- DESTROY -- ********************************/
+void DHCPDestroy(dhcp_t *dhcp)
+{
+	assert(NULL != dhcp);
+	
+	TrieDestroy(dhcp->root); dhcp->root = NULL;
+	dhcp = FreeAndNULL(dhcp);
+}
+
+/******************************** -- LEASE -- *********************************/
+dhcp_status_t DHCPLease(dhcp_t *dhcp, const unsigned char req_ip[BYTES_IN_IP],
 						unsigned char alloc_ip[BYTES_IN_IP])
 {
+	size_t net_id_bytes = 0;
+	size_t host_id_bytes = 0;
+
 	assert(NULL != dhcp);
 	assert(NULL != req_ip);
 	assert(NULL != alloc_ip);
 	
-	if (GetNetID((uchar *)req_ip ,dhcp) != dhcp->net_id)
+	net_id_bytes = ((CHAR_BIT * BYTES_IN_IP) - dhcp->host_id_bits) / CHAR_BIT;
+	host_id_bytes = BYTES_IN_IP - net_id_bytes;
+	
+	if (!IsSameNetID(net_id_bytes, req_ip, dhcp->net_id))
 	{
-		return INVALID_REQUEST; 
+		return INVALID_REQUEST;
 	}
 	
-	memcpy(alloc_ip, req_ip, BYTES_IN_IP);
+	if (TrieIsHostIDAvailable(dhcp->root, host_id_bytes, &req_ip[net_id_bytes]))
+	{
+		return AllocReqIP(req_ip, alloc_ip, dhcp, host_id_bytes);
+	}
 	
-	return IterativeAlloc(dhcp, alloc_ip);
+	return AllocNewIP(req_ip, alloc_ip, dhcp, host_id_bytes);
 }
 
-/*********************************IterativeAlloc*********************************/
-static dhcp_status_t IterativeAlloc(dhcp_t* dhcp, uchar *alloc_ip)
-{
-	parms_t parms = {0,0,0}; 
-	node_t *node = NULL;
-	dhcp_status_t is_path_exist = 0; 
+static int IsSameNetID(size_t net_id_bytes, const unsigned char *req_ip, 
+					   const unsigned char *net_id)
+{	
+	assert(NULL != req_ip);
+	assert(NULL != net_id);
+	assert(0 < net_id_bytes);
 	
-	assert(NULL != dhcp);
+	return !(memcmp(req_ip, net_id, sizeof(unsigned char) * net_id_bytes));
+}
+
+static int AllocReqIP(const unsigned char *req_ip, unsigned char *alloc_ip,
+					  dhcp_t *dhcp, size_t host_id_bytes)
+{
+	int alloc_req_status = 0;
+	size_t net_id_bytes = BYTES_IN_IP - host_id_bytes;
+	
+	assert(NULL != req_ip);
 	assert(NULL != alloc_ip);
-	
-	parms = InitParm(dhcp, alloc_ip); 
-	node = GetRoot(dhcp);
-	
-	while (FAIL != is_path_exist)
-	{
-		direction_t direction = GetDirection(parms);
-		
-		if (IsNodeCreateNedded(node->children[direction]))
-		{
-			CreatePath(parms, node);
-			CopyPathToIP(dhcp, alloc_ip, parms.path);
-			
-			return SUCCESS;
-		}
-		
-		UpdateTraverseParms(&parms, &node);
-		
-		if (IsLeaf(parms) && !IsNodeCreateNedded(node))
-		{
-			is_path_exist = ResetPathTravers(dhcp, &parms, &node ,alloc_ip);
-		}
-	}
-	
-	return FAIL; 	
-}
-
-/**************************UpdateTraverseParms********************************/
-static void UpdateTraverseParms(parms_t *parms, node_t **node)
-{
-	direction_t direction = 0; 
-	
-	assert(NULL != parms);
-	assert(NULL != node);	
-	
-	direction = GetDirection(*parms);
-	
-	parms->traverse_mask >>= 1;
-	--parms->height; 
-	*node = (*node)->children[direction];
-}
-
-/*********************************IsLeaf****************************************/
-static int IsLeaf(parms_t parms)
-{
-	return (0 == parms.height);
-}
-/*********************************InitParm**************************************/
-static parms_t InitParm(dhcp_t *dhcp, uchar *alloc_ip)
-{
-	parms_t parms ;
-	
-	assert(NULL != dhcp);
-	assert(NULL != alloc_ip);
-	
-	parms.traverse_mask = GetTraverseMask(dhcp); 
-	parms.path  = GetPath(dhcp, alloc_ip);
-	parms.height = GetHostBitNum(dhcp);
-	
-	return parms; 
-}
-
-/*********************************GetMaxPath**********************************/
-static uint GetMaxPath(dhcp_t *dhcp)
-{
 	assert(NULL != dhcp);
 	
-	return (1 << GetHostBitNum(dhcp)) - 1;
-}
-
-/*********************************UpdateNextPath******************************/
-static uint UpdateNextPath(uint path, uint max_path)
-{
-	if (max_path == path || (max_path - 1) == path)
-	{
-		return 0; 
-	}
-	
-	return ++path; 
-}
-
-/*********************************CreatePath***********************************/
-static void CreatePath(parms_t parms, node_t *node)
-{
-	while (!IsLeaf(parms))
-	{
-		direction_t direction = GetDirection(parms);
-		
-		node->children[direction] = CreateNode();
-		UpdateTraverseParms(&parms, &node);
-	}
-}
-
-/*********************************ResetPathTravers******************************/
-static dhcp_status_t ResetPathTravers(dhcp_t *dhcp, parms_t *parms
-														, node_t **node, uchar *alloc_ip)
-{
-	assert(NULL != parms);
-	assert(NULL != *node);
-	assert(NULL != dhcp);
-	assert(NULL != alloc_ip);
-	
-	parms->path = UpdateNextPath(parms->path, GetMaxPath(dhcp));
-	if (parms->path == GetPath(dhcp, alloc_ip))
+	alloc_req_status = TrieAllocReqHostID(dhcp->root, &req_ip[net_id_bytes], 
+										  host_id_bytes);
+	if (FAIL == alloc_req_status)
 	{
 		return FAIL;
 	}
 	
-	parms->traverse_mask =  GetTraverseMask(dhcp);
-	parms->height = GetHostBitNum(dhcp);
-	*node = GetRoot(dhcp);
+	memcpy(alloc_ip, req_ip, sizeof(unsigned char) * BYTES_IN_IP);
 	
-	return SUCCESS; 
+	--dhcp->available_ip_adresses;
+	return SUCCESS;
 }
 
-/******************************GetTraverseMask********************************/
-static uint GetTraverseMask(dhcp_t *dhcp)
+static int AllocNewIP(const unsigned char *req_ip, unsigned char *alloc_ip,
+					  dhcp_t *dhcp, size_t host_id_bytes)
 {
+	unsigned char *new_req_ip = NULL;
+	int update_host_id_status = 0;
+	int alloc_req_status = 0;
+	size_t net_id_bytes = BYTES_IN_IP - host_id_bytes;
+	
+	assert(NULL != req_ip);
+	assert(NULL != alloc_ip);
 	assert(NULL != dhcp);
 	
-	return 1u << (GetHostBitNum(dhcp) - 1);
-}
-
-/**************************IsNodeCreateNedded********************************/
-static int IsNodeCreateNedded(node_t *node)
-{
-	return (node == NULL);
-}
-
-/*********************************GetRoot**************************************/
-static node_t *GetRoot(dhcp_t *dhcp)
-{
-	assert(NULL != dhcp);
-	
-	return dhcp->root;
-}
-
-/*********************************DHCPCountFree******************************/
-size_t DHCPCountFree(const dhcp_t *dhcp)
-{
-	size_t counter = 0; 
-	size_t i = 0; 
-	uint max_path = GetMaxPath((dhcp_t *)dhcp);
-	
-	assert(NULL != dhcp);
-	
-	for(i = 1; i < max_path - 1; ++i)
+	new_req_ip = (unsigned char *)calloc(BYTES_IN_IP, sizeof(unsigned char));
+	if (NULL == new_req_ip)
 	{
-		if (IsPathExist((dhcp_t *)dhcp, i))
-		{
-			++counter; 
-		}		
+		return FAIL;
 	}
 	
-	return max_path - 2 - counter; 
-}
-
-/*********************************IsPathExist***********************************/
-static int IsPathExist(dhcp_t *dhcp, uint path)
-{
-	parms_t parms = {0, 0, 0};
-	node_t *node = NULL;
-	uchar ip[BYTES_IN_IP] = {0};
-	
-	assert(NULL != dhcp);
-	
-	node = GetRoot(dhcp);
-	
-	CopyPathToIP(dhcp, ip, path);
-	parms = InitParm(dhcp, ip);
-	
-	while (!IsLeaf(parms)) 
+	update_host_id_status = TrieUpdateNextAvailableHostID(dhcp->root, 
+														  host_id_bytes,
+													      &new_req_ip
+													      [net_id_bytes]);
+	if (FAIL == update_host_id_status)
 	{
-		direction_t direction = GetDirection(parms);
-		
-		 if (IsNodeCreateNedded(node->children[direction]))
-		{
-			return NOT_EXIST;
-		}
-		
-		UpdateTraverseParms(&parms, &node);
+		new_req_ip = FreeAndNULL(new_req_ip);
+		return FAIL;
 	}
 	
-	return EXIST;
-}	
-/*********************************GetDirection*********************************/
-static direction_t GetDirection(parms_t parms)
-{
-	return ((parms.path & parms.traverse_mask) != 0); 
+	alloc_req_status = TrieAllocReqHostID(dhcp->root, &new_req_ip[net_id_bytes], 
+										  host_id_bytes);
+	if (FAIL == alloc_req_status)
+	{
+		new_req_ip = FreeAndNULL(new_req_ip);
+		return FAIL;
+	}
+	
+	/*copy net_id*/
+	memcpy(alloc_ip, req_ip, sizeof(unsigned char) * net_id_bytes);
+	/*copy host_id*/
+	memcpy(&alloc_ip[net_id_bytes], &new_req_ip[net_id_bytes], 
+		   sizeof(unsigned char) * host_id_bytes);
+		   
+	new_req_ip = FreeAndNULL(new_req_ip);
+	
+	--dhcp->available_ip_adresses;
+	return SUCCESS;
 }
 
-/*********************************DHCPRelease********************************/
+
+/****************************** -- RELEASE -- *********************************/
 dhcp_status_t DHCPRelease(dhcp_t *dhcp, 
 						  const unsigned char ip_to_release[BYTES_IN_IP])
 {
-	parms_t parms = {0,0,0}; 
-	node_t *root = NULL;
-	direction_t direction = 0;
-		
+	size_t net_id_bytes = 0;
+	size_t host_id_bytes = 0;
+	
 	assert(NULL != dhcp);
 	assert(NULL != ip_to_release);
 	
-	parms = InitParm(dhcp,(uchar *)ip_to_release); 
+	net_id_bytes = BYTES_IN_IP - (dhcp->host_id_bits / CHAR_BIT);
+	host_id_bytes = BYTES_IN_IP - net_id_bytes;
 	
-	if (!IsPathExist(dhcp, parms.path) || IsIllegalPath(dhcp, parms.path))
+	if (!IsSameNetID(net_id_bytes, ip_to_release, dhcp->net_id))
 	{
 		return INVALID_REQUEST;
 	}
-		
-	root = GetRoot(dhcp);
-	direction = GetDirection(parms);
 	
-	root->children[direction] = RecRelease(root->children[direction], parms);
-	
-	return SUCCESS;
-}
-/*********************************IsIllegalPath**********************************/
-static int IsIllegalPath(dhcp_t *dhcp, uint path)
-{
-	uint max_path = 0; 
-	
-	assert(NULL != dhcp);
-	
-	max_path = GetMaxPath(dhcp);
-	
-	if ((0 == path) || (max_path == path) || (max_path - 1 == path))
+	if (IsReservedHostIP(&ip_to_release[net_id_bytes], 
+						 dhcp->net_id, net_id_bytes))
 	{
-		return 1; 
+		return INVALID_REQUEST;
 	}
 	
+	if (TrieIsPathExist(dhcp->root, dhcp->host_id_bits / CHAR_BIT,
+					&ip_to_release[net_id_bytes]))
+	{
+		return ReleaseIP(dhcp, host_id_bytes, ip_to_release);
+	}
+	
+	return INVALID_REQUEST;
+}
+
+static int IsReservedHostIP(const unsigned char *host_id_to_release, 
+							const unsigned char *net_id, size_t net_id_bytes)
+{
+	unsigned char req_last_ip[BYTES_IN_IP] = {0};
+	unsigned char req_before_last_ip[BYTES_IN_IP] = {0};
+	unsigned char req_first_ip[BYTES_IN_IP] = {0};
+	
+	assert(NULL != host_id_to_release);
+	assert(NULL != net_id);
+	
+	InitReserveIP(req_last_ip, req_before_last_ip, req_first_ip, net_id, 
+				  net_id_bytes);
+	
+	if (0 == memcmp(&req_last_ip[net_id_bytes], host_id_to_release, 
+					BYTES_IN_IP - net_id_bytes))
+	{
+		return 1;
+	}
+	
+	if (0 == memcmp(&req_before_last_ip[net_id_bytes], host_id_to_release, 
+					BYTES_IN_IP - net_id_bytes))
+	{
+		return 1;
+	}
+	
+	if (0 == memcmp(&req_first_ip[net_id_bytes], host_id_to_release, 
+					BYTES_IN_IP - net_id_bytes))
+	{
+		return 1;
+	}
+
 	return 0;
 }
-/*********************************RecRelease**********************************/
-static node_t *RecRelease(node_t *node, parms_t parms)
+
+static int ReleaseIP(dhcp_t *dhcp, size_t host_id_bytes, 
+				  const unsigned char *ip_to_release)
 {
-	direction_t direction = 0;
-	
-	
-	if(0 == NumOfChilden(node))
-	{
-		free(node); node = NULL;
+	size_t net_id_bytes = BYTES_IN_IP - host_id_bytes;
+	trie_node_t *path_leaf = TrieGetPathLeaf(dhcp->root, host_id_bytes, 
+								 			  &ip_to_release[net_id_bytes]);
 		
-		return NULL;
-	}
-		
-	parms.traverse_mask >>= 1;
-	direction = GetDirection(parms);
-
-	node->children[direction] = RecRelease(node->children[direction], parms);
-																  
-	if(0 == NumOfChilden(node))
-	{
-		free(node); node = NULL;
-		
-		return NULL;
-	}
+	trie_node_t *node_to_update = TrieFreeNewPath(path_leaf);
 	
-	return node;																	  
+	node_to_update->is_available = AVAILABLE;
+	TrieUpdateAvailabilityOfNodes(node_to_update);
+	
+	++dhcp->available_ip_adresses;
+	return SUCCESS;
 }
 
-/*********************************NumOfChilden********************************/
-static size_t NumOfChilden(node_t *node)
-{	
-	return ((NULL != node->children[RIGHT]) + (NULL != node->children[LEFT])); 
+/****************************** -- COUNT FREE -- ******************************/
+size_t DHCPCountFree(const dhcp_t *dhcp)
+{
+	assert(NULL != dhcp);
+	
+	return dhcp->available_ip_adresses;
 }
+

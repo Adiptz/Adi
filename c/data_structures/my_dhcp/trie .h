@@ -1,8 +1,4 @@
-/************************************
-*	Author: Daya					*
-*	Reviewer: 					*
-*	Status : 						*
-*************************************/
+
 #ifndef ILRD_TRIE_H
 #define ILRD_TRIE_H
 

@@ -1,8 +1,3 @@
-/*************************
- * Author   : Adi        *
- * Reviewer : Maya       *
- * Status   : Sent       *
- *************************/
 
 #include <assert.h> /* assert */
 #include <math.h> /* sqrt */

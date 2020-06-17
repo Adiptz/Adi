@@ -1,9 +1,3 @@
-/**************************
- *    Author  : Adi       *
- *    Reviwer : Daya      *
- *    Status  : Sent      *
- **************************/
-
 #include "uid.h"
 
 const ilrd_uid_t BAD_UID = {0, 0};

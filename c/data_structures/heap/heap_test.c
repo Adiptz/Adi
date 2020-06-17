@@ -147,7 +147,7 @@ int main()
 	Create_Destroy_test();
 	Push_Pop_test();
 	Remove_test();
-/*	HeapSort();*/
+	HeapSort();
 	
 	return 0;
 }

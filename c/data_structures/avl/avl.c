@@ -1,9 +1,3 @@
-/*************************
- *  Author   :  Adi      *
- *  Reviewer :  Hila     *
- *  Status   :  Sent     *
- *************************/
-
 #include <assert.h> /* assert */
 #include <stdlib.h> /* malloc */
 

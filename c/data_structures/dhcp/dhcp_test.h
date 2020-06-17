@@ -1,5 +1,8 @@
 #include <assert.h> /*assert*/
 #include <stdio.h>  /*printf*/
+#include <limits.h> /* CHAR_BIT, UCHAR_MAX */
+#include <math.h>   /* pow */
+#include <string.h> /* memcmp */
 
 #include "dhcp.h"
 

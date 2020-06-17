@@ -1,0 +1,28 @@
+
+#add_button_container {
+  position: sticky;
+  margin-left: 94%;
+  bottom: 10px;
+}
+
+#add_button {
+  background: transparent;
+  position: relative;
+  bottom: 4vh;
+  //right: 1px;
+  border: none;
+  height: 80px;
+  width: 80px;
+  //margin-left: 93vw;
+  //padding-right: 20px;
+  //padding-left: 10px;
+  //padding-bottom: 30px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
