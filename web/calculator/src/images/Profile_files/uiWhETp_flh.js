@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["\/s91V"]); }
-
-__d("AdsConversionsShopAdgroupSpecPathPlugin",["AdsAPIObjectives","AdsCallToActionTypesCond","AdsDefaultAdgroupSpecPathPlugin","AdsPromotedObjectTypes","AdsWebsiteAdgroupSpecPathPluginCommon"],(function(a,b,c,d,e,f){"use strict";a=babelHelpers["extends"]({},b("AdsDefaultAdgroupSpecPathPlugin"),b("AdsWebsiteAdgroupSpecPathPluginCommon"),{type:"adgroup/spec-path",key:"conversions/shop",pivots:{objective:b("AdsAPIObjectives").CONVERSIONS,promotedObjectType:b("AdsPromotedObjectTypes").SHOP},getDefaultCallToActionType:function(a){return b("AdsCallToActionTypesCond").TYPES.SHOP_NOW.text}});e.exports=a}),null);
