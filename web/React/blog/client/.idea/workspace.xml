@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d1eb3203-9a1d-43a1-879c-547507304420" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../anyvision/exercise/full_blog/client/scripts/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../anyvision/exercise/full_blog/client/scripts/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/buttons/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/buttons/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/buttons/share.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/buttons/trash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/instagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icons/youtube.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/share.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header_text/header_text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header_text/header_text.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header_text/header_text.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/nav_bar/nav_bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/nav_bar/nav_bar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/nav_bar/nav_bar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login_page/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/login_page/login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main_feed/main_feed.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/plus_button/plus_button.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/plus_button/plus_button.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/plus_button/plus_button.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/post/actions_bar/actions_bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/post/actions_bar/actions_bar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/post/actions_bar/actions_bar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/post/post.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/post/post.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/post/post.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/posts_list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts_list/posts_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search_bar/search_bar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search_bar/search_bar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/search_bar/search_bar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/signup_page/signup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/signup_page/signup.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/signup_page/signup_page.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/db/create-db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/db/db_connection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/models/posts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/models/sessions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/routes/login_check.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/services/user-service.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1YzllidndM8eQctEFLoRdRWPTEC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1eb3203-9a1d-43a1-879c-547507304420" name="Default Changelist" comment="" />
+      <created>1585400740075</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585400740075</updated>
+      <workItem from="1585400741589" duration="100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
