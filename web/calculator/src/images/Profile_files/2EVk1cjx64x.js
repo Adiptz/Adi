@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["KhCci"]); }
+
+__d("ReactUseEvent.react",["React","ReactDOMComet"],(function(a,b,c,d,e,f){"use strict";c=b("React");var g=c.useEffect,h=c.useRef,i=b("ReactDOMComet").unstable_createEventHandle;function a(a,b){var c=h(null);c.current===null&&(c.current=i(a,b));g(function(){var a=c.current;return function(){a!==null&&a.clear(),c.current=null}},[]);return c.current}e.exports=a}),null);

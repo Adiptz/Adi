@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["IbVS4"]); }
+
+__d("ReactKeyboardEvent.react",["React","ReactUseEvent.react"],(function(a,b,c,d,e,f){"use strict";c=b("React");var g=c.useEffect,h={passive:!0};function a(a,c){var d=c.disabled,e=c.onKeyDown,f=c.onKeyUp,i=b("ReactUseEvent.react")("keydown"),j=b("ReactUseEvent.react")("keyup",h);g(function(){var b=a.current;b!==null&&(i.setListener(b,!d&&e||null),j.setListener(b,!d&&f||null))},[d,e,i,j,a,f])}e.exports={useKeyboard:a}}),null);
