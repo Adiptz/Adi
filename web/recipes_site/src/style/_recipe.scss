@@ -1,0 +1,31 @@
+.recipes-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recipe-box {
+  flex: 0 50%;
+  max-width: 420px;
+  border: solid 3px #e0721d;
+  margin: 0 2vw 20px;
+  background: #fff;
+  border-radius: 20px;
+
+  h1 {
+    color: #282c34;
+    background: #fff;
+    padding: 0 14px;
+  }
+
+  ol li {
+    text-align: left;
+  }
+
+  img {
+    margin: 30px auto;
+    border-radius: 50%;
+    width: 165px;
+    height: 165px;
+  }
+}
