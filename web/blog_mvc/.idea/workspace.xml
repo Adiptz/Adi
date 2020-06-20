@@ -142,7 +142,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/adi-peretz/blog-react" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -156,7 +156,7 @@
       <updated>1592344296902</updated>
       <workItem from="1592344298088" duration="1623000" />
       <workItem from="1592381232858" duration="2346000" />
-      <workItem from="1592404213371" duration="763000" />
+      <workItem from="1592404213371" duration="1375000" />
     </task>
     <servers />
   </component>
@@ -168,9 +168,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="538" y="276" width="900" height="553" key="EditFileWatcherDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1592381583743" />
-    <state x="1106" y="253" width="530" height="598" key="FileChooserDialogImpl" timestamp="1592382419718">
+    <state x="1106" y="253" width="530" height="598" key="FileChooserDialogImpl" timestamp="1592440589463">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="1106" y="253" width="530" height="598" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1592382419718" />
+    <state x="1106" y="253" width="530" height="598" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1592440589463" />
   </component>
 </project>
