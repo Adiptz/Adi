@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #00efff;
+  margin-top: 20vh;
+}
+
+#separator {
+  height: 50px;
+}
+
+.flex_observers {
+  display: flex;
+}
+
+.observer {
+  margin: 10px;
+  background: royalblue;
+  border-radius: 10px;
+  width: 20vw;
+  height: 20vh;
+}
+
+#button_obs {
+  height: 5vh;
+  width: 7vw;
+  border-radius: 5px;
+  border-color: wheat;
+  background: rebeccapurple;
+  color: white;
+  font-weight: bold;
+}
+#button_obs:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=observer.css.map */

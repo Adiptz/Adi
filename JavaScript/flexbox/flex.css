@@ -1,0 +1,58 @@
+ .flex_container {
+    display: flex;
+    width: 80%;
+    border: 1px solid black;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+     justify-content: flex-start;
+ }
+
+.line  {
+    display: flex;
+    height: 100px;
+    flex-direction: row-reverse;
+    text-align: right;
+    margin-top : 5px;
+    margin-bottom: 5px;
+}
+
+.left_align{
+    text-align: left;
+    flex-direction: row;
+}
+
+.box1 {
+    border: 1px solid hotpink;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box2 {
+    border: 1px solid hotpink;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.box3 {
+    flex: 2;
+    border: 1px solid hotpink;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*buttons*/
+#leftToRight {
+   width: 10%;
+   align-self: center;
+   display: inline-flex;
+}
+
+ #rightToLeft {
+     width: 10%;
+     align-self: center;
+     display: inline-flex;
+ }

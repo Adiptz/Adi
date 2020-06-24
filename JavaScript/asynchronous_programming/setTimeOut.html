@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        HTML | DOM Windows clearTimeout() method
+    </title>
+</head>
+
+<body>
+
+<button id="btn" onclick="fun()" style="color: blue;">
+    3 Seconds</button>
+<button id="btn" onclick="stop()">Stop</button>
+<script>
+    var t;
+
+    function color() {
+        if (document.getElementById('btn').style.color == 'blue') {
+            document.getElementById('btn').style.color = 'green';
+
+        } else {
+            document.getElementById('btn').style.color = 'blue';
+        }
+
+        // if use setInterval silent this :
+        t = setTimeout(color, 3000);
+
+    }
+
+    function fun() {
+        t = setTimeout(color, 3000); //could replaced with :
+        //t = setInterval(color, 3000);
+
+    }
+
+    function stop() {
+        clearTimeout(t); //could replaced with :
+        //clearInterval(t);
+
+
+    }
+</script>
+</body>
+
+</html>
