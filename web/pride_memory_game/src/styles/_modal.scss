@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap');
 
 /* -- start game button -- */
 .rainbow-text {
-  background-image: linear-gradient(to left, pink, yellow, red, green, yellow, red);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+  font-family: "Roboto", sans-serif;
+  color: #CEF0D4; font-size: 130px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+
 .rainbow{
   background-color: #343A40;
   border-radius: 4px;

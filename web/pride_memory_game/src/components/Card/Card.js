@@ -4,34 +4,38 @@ import pride from '../../images/pride.jpg'
 
 
 const Card = ({cardImage, id, handleFlip, handleBackFlip}) => {
-    const [isFlipped, setIsFlipped] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+    const show = () => {
+        setIsVisible(true);
+        let isMatch = handleFlip(id);
+        if (isMatch === false) {
+            setIsVisible(false);
+        }
+    }
+
+    const hide = () => {
+            let shouldClose = handleBackFlip(id);
+            if (shouldClose) setIsVisible(false);
+    }
 
     return (
         <ReactCardFlip
-            isFlipped={isFlipped}
+            isFlipped={isVisible}
             flipDirection="vertical">
 
-            <div key="front" className={'front'}>
+            <div key="front" className={`front`}>
                 <img
                     alt={'pride_month'}
                     src={pride}
-                    onClick={() => {
-                        setIsFlipped(true);
-                        let shouldFlip = handleFlip(id);
-                        if (shouldFlip === false) {
-                            setIsFlipped(false)
-                        }
-                    }}/>
+                    onClick={show}/>
             </div>
 
-            <div key="back" className={'back'}>
+            <div key="back" className={`back`}>
                 <img
-                    alt={'gay_influence_character'}
+                    alt={'gay_character'}
                     src={require(`../../images/${cardImage}`)}
-                    onClick={() => {
-                        let shouldFlipBack = handleBackFlip(id);
-                        if (shouldFlipBack) setIsFlipped(false);
-                    }}
+                    onClick={hide}
                 />
             </div>
         </ReactCardFlip>
@@ -39,3 +43,4 @@ const Card = ({cardImage, id, handleFlip, handleBackFlip}) => {
 }
 
 export default Card;
+

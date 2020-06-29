@@ -5,7 +5,9 @@
   display: flex;
   border-radius: 5px;
 }
-
+.hidden {
+  visibility: hidden;
+}
 .react-card-flip {
   margin-left: 1vw;
   margin-top: 3vh;

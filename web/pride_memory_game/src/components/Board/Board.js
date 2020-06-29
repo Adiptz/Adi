@@ -7,7 +7,7 @@ const Board = ({handleFindMatch}) => {
     const [cards, setCards] = useState(getRandomCards)
     const [flippedCards, setFlippedCards] = useState([]);
     const [matchingCards, setMatchingCards] = useState([]);
-    const [congrats, setCongrats] = useState(false)
+
     //
     // const reset = () => {
     //     setMatchingCards([]);
@@ -20,52 +20,56 @@ const Board = ({handleFindMatch}) => {
     }
 
     const handleFlip = (id) => {
-        if (flippedCards.length === 0) {
+        let numOpenCards = flippedCards.length;
+
+        if (numOpenCards >= 0 && numOpenCards < 2) {
             setFlippedCards([...flippedCards, id]);
-        } else if (flippedCards.length === 1) {
-            setFlippedCards([flippedCards[0], id])
         } else {
-            return false;
+            return false; // can't flip more than 2 cards
         }
 
-            if (flippedCards.includes(id)) {
-                handleFindMatch();
-                setMatchingCards([...matchingCards, id]);
-                setFlippedCards([]);
-            }
+        /* -- if match -- */
+        if (flippedCards.includes(id)) {
+            handleFindMatch();
+            setMatchingCards([...matchingCards, id]);
+            setFlippedCards([]);
+            return ;
+        } else {
+            return ;
         }
-
-        const handleBackFlip = (id) => {
-            if (matchingCards.includes(id)) return
-
-            if (countInArray(flippedCards, id) === 2) {
-                setMatchingCards([...matchingCards, id]);
-                return false;
-            } else {
-                const index = flippedCards.indexOf(id);
-                if (index > -1) flippedCards.splice(index, 1);
-                console.log(`after modified ${flippedCards}`);
-
-                return true;
-            }
-        }
-
-        return (
-            <div className='board'>
-
-                {cards.map((card) =>
-                    <Card
-                        className={'card'}
-                        id={card.id}
-                        isFlipped={() => flippedCards.includes(card.id)}
-                        cardImage={card.cardImage}
-                        handleFlip={handleFlip}
-                        handleBackFlip={handleBackFlip}
-                    />
-                )}
-            </div>
-
-        );
-
     }
-    export default Board;
+
+    const handleBackFlip = (id) => {
+        if (matchingCards.includes(id)) return
+
+        if (countInArray(flippedCards, id) === 2) {
+            setMatchingCards([...matchingCards, id]);
+            return false;
+        } else {
+            const index = flippedCards.indexOf(id);
+            if (index > -1) flippedCards.splice(index, 1);
+            console.log(`after modified ${flippedCards}`);
+
+            return true;
+        }
+    }
+
+    return (
+        <div className='board'>
+
+            {cards.map((card) =>
+                <Card
+                    className={'card'}
+                    id={card.id}
+                    isFlipped={() => flippedCards.includes(card.id)}
+                    cardImage={card.cardImage}
+                    handleFlip={handleFlip}
+                    handleBackFlip={handleBackFlip}
+                />
+            )}
+        </div>
+
+    );
+
+}
+export default Board;
