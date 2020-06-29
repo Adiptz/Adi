@@ -11,7 +11,7 @@ const Counter = ({count}) => {
                 content={'timer'} hidden={true}/>
         );
     } else return (
-        <h2 className={'counter'}>Matches {count} </h2>
+        <h2 className={'counter'}><span>{count}</span>  <br/> matches</h2>
     );
 }
 export default Counter;

@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap');
+
 .counter {
-  //font-size: larger;
+  font-family: 'MuseoModerno', cursive;  font-size: medium;
   font-weight: bolder;
-  color: purple;
+  color: #fc5d7a;
   text-align: center;
-  width: 30%;
-  max-width: 150px;
-  margin: 40px auto 0;
-  bottom: 30px;
+  width: 100%;
+  margin: 0 auto 1vh;
+  bottom: 40px;
+  span {
+    color: yellow;
+    font-size: larger;
+  }
 }

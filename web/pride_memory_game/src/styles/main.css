@@ -1,5 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap");
 .board {
   margin: 15vh auto auto 4vw;
+  padding-top: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,6 +47,9 @@ h1 {
   display: flex;
   border-radius: 5px; }
 
+.hidden {
+  visibility: hidden; }
+
 .react-card-flip {
   margin-left: 1vw;
   margin-top: 3vh;
@@ -57,23 +65,40 @@ img {
   cursor: pointer; }
 
 .counter {
+  font-family: 'MuseoModerno', cursive;
+  font-size: medium;
   font-weight: bolder;
-  color: purple;
+  color: #fc5d7a;
   text-align: center;
-  width: 30%;
-  max-width: 150px;
-  margin: 40px auto 0;
-  bottom: 30px; }
+  width: 100%;
+  margin: 0 auto 1vh;
+  bottom: 40px; }
+  .counter span {
+    color: yellow;
+    font-size: larger; }
 
 /* -- start game button -- */
 .rainbow-text {
-  background-image: linear-gradient(to left, pink, yellow, red, green, yellow, red);
-  -webkit-background-clip: text;
-  color: transparent; }
+  font-family: 'MuseoModerno', cursive;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: purple;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 1vh;
+  padding-bottom: 40px; }
+
+p {
+  margin: 0;
+  font-family: 'MuseoModerno', cursive;
+  font-size: 12px;
+  text-align: center; }
 
 .rainbow {
+  border: none;
+  font-family: 'MuseoModerno', cursive;
   background-color: #343A40;
-  border-radius: 4px;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
   padding-top: 2px;
@@ -83,7 +108,7 @@ img {
   left: 50%;
   width: 100px;
   margin-left: -50px;
-  bottom: 10px; }
+  bottom: 20px; }
 
 @keyframes slidebg {
   to {
@@ -132,8 +157,8 @@ img {
 .rodal-dialog {
   align-content: center;
   position: absolute;
-  height: 190px;
-  width: 200px;
+  height: 170px;
+  width: 150px;
   top: 0;
   left: 0;
   right: 0;
@@ -408,9 +433,10 @@ img {
   animation: rodal-door-leave both; }
 
 .happy-pride-month {
+  font-family: 'MuseoModerno', cursive;
   font-size: xx-large;
   font-weight: bolder;
-  color: purple;
+  color: #fc5d7a;
   text-align: center;
   width: 100%;
   margin: 0 auto 1vh; }

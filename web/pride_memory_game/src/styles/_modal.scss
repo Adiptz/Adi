@@ -2,12 +2,25 @@
 
 /* -- start game button -- */
 .rainbow-text {
-  font-family: "Roboto", sans-serif;
-  color: #CEF0D4; font-size: 130px; font-weight: normal; line-height: 48px; margin: 0 0 50px; text-align: center; text-shadow: 1px 1px 2px #082b34; }
+  font-family: 'MuseoModerno', cursive;  font-size: xx-large;
+  font-weight: bolder;
+  color: purple;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 1vh;
+  padding-bottom: 40px;
+}
 
+p {
+  margin: 0;
+  font-family: 'MuseoModerno', cursive;  font-size: 12px;
+  text-align: center;
+}
 .rainbow{
+  border: none;
+  font-family: 'MuseoModerno', cursive;
   background-color: #343A40;
-  border-radius: 4px;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
   padding-top: 2px;
@@ -17,7 +30,7 @@
   left: 50%;
   width: 100px;
   margin-left: -50px;
-  bottom:10px;
+  bottom:20px;
 }
 
 @keyframes slidebg {
@@ -78,8 +91,8 @@
 .rodal-dialog {
   align-content: center;
   position: absolute;
-  height: 190px;
-  width: 200px;
+  height: 170px;
+  width: 150px;
   top: 0;
   left: 0;
   right: 0;
