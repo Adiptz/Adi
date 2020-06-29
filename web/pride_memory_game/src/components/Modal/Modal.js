@@ -14,7 +14,7 @@ const Modal = ({content, hidden, headline}) => {
     }
 
     const instructions = `Turn over any two cards. \n
-                          Found match? great! \n
+                          Found a match? great! \n
                           If not - flip them over. \n
                           The game is over when all the cards have been matched.`;
 

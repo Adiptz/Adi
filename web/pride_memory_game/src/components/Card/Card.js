@@ -17,7 +17,10 @@ const Card = ({cardImage, id, handleFlip, handleBackFlip}) => {
                     src={pride}
                     onClick={() => {
                         setIsFlipped(true);
-                        handleFlip(id);
+                        let shouldFlip = handleFlip(id);
+                        if (shouldFlip === false) {
+                            setIsFlipped(false)
+                        }
                     }}/>
             </div>
 

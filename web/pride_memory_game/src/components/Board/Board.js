@@ -20,29 +20,32 @@ const Board = ({handleFindMatch}) => {
     }
 
     const handleFlip = (id) => {
-        setFlippedCards([...flippedCards, id]);
-        if (flippedCards.includes(id)) {
-            setCongrats(true);
-            handleFindMatch();
-            setTimeout(() => {
-                setCongrats(false)
-            }, 1000);
-        }
-    }
-
-    const handleBackFlip = (id) => {
-
-        if (countInArray(flippedCards, id) === 2) {
-            setMatchingCards([...matchingCards, id]);
-            return false;
+        if (flippedCards.length === 0) {
+            setFlippedCards([...flippedCards, id]);
+        } else if (flippedCards.length === 1) {
+            setFlippedCards([flippedCards[0], id])
         } else {
-            const index = flippedCards.indexOf(id);
-            if (index > -1) flippedCards.splice(index, 1);
-            console.log(`after modified ${flippedCards}`);
-
-            return true;
+            return false;
         }
-    }
+
+            if (flippedCards.includes(id)) {
+                handleFindMatch();
+            }
+        }
+
+        const handleBackFlip = (id) => {
+
+            if (countInArray(flippedCards, id) === 2) {
+                setMatchingCards([...matchingCards, id]);
+                return false;
+            } else {
+                const index = flippedCards.indexOf(id);
+                if (index > -1) flippedCards.splice(index, 1);
+                console.log(`after modified ${flippedCards}`);
+
+                return true;
+            }
+        }
 
         return (
             <div className='board'>
@@ -61,5 +64,5 @@ const Board = ({handleFindMatch}) => {
 
         );
 
-}
-export default Board;
+    }
+    export default Board;
