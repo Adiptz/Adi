@@ -1,0 +1,23 @@
+.card-container {
+  margin-right: 10vw;
+  margin-bottom: 10vw;
+  perspective: 1000px;
+  display: flex;
+  border-radius: 5px;
+}
+
+.react-card-flip {
+  margin-left: 1vw;
+  margin-top: 3vh;
+  flex: 1 0 21%;
+}
+
+img {
+  box-shadow: 10px 10px 5px black;
+  -moz-box-shadow: 10px 10px 5px 5px black;
+  -webkit-box-shadow: 5px 5px 5px powderblue;
+  border-radius: 20px 20px;
+  width: 15vw;
+  height: 18vh;
+  cursor: pointer;
+}

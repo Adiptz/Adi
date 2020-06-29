@@ -1,0 +1,30 @@
+@import '_board', '_card', '_counter', '_modal';
+
+.happy-pride-month  {
+  font-size: xx-large;
+  font-weight: bolder;
+  color: purple;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 1vh;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: gray;
+}
+//
+//body::after {
+//    content: "";
+//    background-image: url('../images/confetti.png');
+//    opacity: 0.3;
+//    top: 0;
+//    left: 0;
+//    bottom: 0;
+//    right: 0;
+//    position: absolute;
+//    z-index: -1;
+//}
