@@ -95,6 +95,7 @@ p {
   text-align: center; }
 
 .rainbow {
+  outline: none;
   border: none;
   font-family: 'MuseoModerno', cursive;
   background-color: #343A40;
@@ -122,6 +123,7 @@ p {
   text-decoration: none; }
 
 .rainbow-1:hover {
+  outline: none;
   background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
   animation: slidebg 5s linear infinite; }
 

@@ -6,12 +6,10 @@ const Counter = ({count}) => {
     const isDone = (count === numOfCards / 2);
     if (isDone) {
         return (
-            <Modal
-                headline={'Thanks For Playing!'}
-                content={'timer'} hidden={true}/>
+            <Modal hidden={true} headline={'Thanks For Playing!'}/>
         );
     } else return (
-        <h2 className={'counter'}><span>{count}</span>  <br/> matches</h2>
+        <h2 className={'counter'}><span>{count}</span> <br/> matches</h2>
     );
 }
 export default Counter;
