@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/pride-memory-game/precache-manifest.2193746b307c57503569eefc6461ac9e.js"
+  "/pride-memory-game/precache-manifest.8c2dbaa78be298624d95a7d45a45ed1f.js"
 );
 
 self.addEventListener('message', (event) => {

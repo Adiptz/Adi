@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/pride-memory-game/static/css/main.f07ce707.chunk.css",
-    "main.js": "/pride-memory-game/static/js/main.4e0d021d.chunk.js",
-    "main.js.map": "/pride-memory-game/static/js/main.4e0d021d.chunk.js.map",
+    "main.css": "/pride-memory-game/static/css/main.8c7b84ec.chunk.css",
+    "main.js": "/pride-memory-game/static/js/main.8d1c5893.chunk.js",
+    "main.js.map": "/pride-memory-game/static/js/main.8d1c5893.chunk.js.map",
     "runtime-main.js": "/pride-memory-game/static/js/runtime-main.72c8afdf.js",
     "runtime-main.js.map": "/pride-memory-game/static/js/runtime-main.72c8afdf.js.map",
     "static/js/2.d3ae053b.chunk.js": "/pride-memory-game/static/js/2.d3ae053b.chunk.js",
     "static/js/2.d3ae053b.chunk.js.map": "/pride-memory-game/static/js/2.d3ae053b.chunk.js.map",
     "index.html": "/pride-memory-game/index.html",
-    "precache-manifest.2193746b307c57503569eefc6461ac9e.js": "/pride-memory-game/precache-manifest.2193746b307c57503569eefc6461ac9e.js",
+    "precache-manifest.8c2dbaa78be298624d95a7d45a45ed1f.js": "/pride-memory-game/precache-manifest.8c2dbaa78be298624d95a7d45a45ed1f.js",
     "service-worker.js": "/pride-memory-game/service-worker.js",
-    "static/css/main.f07ce707.chunk.css.map": "/pride-memory-game/static/css/main.f07ce707.chunk.css.map",
+    "static/css/main.8c7b84ec.chunk.css.map": "/pride-memory-game/static/css/main.8c7b84ec.chunk.css.map",
     "static/js/2.d3ae053b.chunk.js.LICENSE.txt": "/pride-memory-game/static/js/2.d3ae053b.chunk.js.LICENSE.txt",
     "static/media/alan.jpg": "/pride-memory-game/static/media/alan.e4c7e43f.jpg",
     "static/media/confetti.png": "/pride-memory-game/static/media/confetti.81c76252.png",
     "static/media/dana.jpg": "/pride-memory-game/static/media/dana.d51a7cd1.jpg",
     "static/media/ellen.jpg": "/pride-memory-game/static/media/ellen.42ac9ccb.jpg",
-    "static/media/ofra.webp": "/pride-memory-game/static/media/ofra.dda2e788.webp",
+    "static/media/ofra.jpg": "/pride-memory-game/static/media/ofra.771c34d9.jpg",
     "static/media/pride.jpg": "/pride-memory-game/static/media/pride.7c5fbad4.jpg",
     "static/media/rupaul.jpg": "/pride-memory-game/static/media/rupaul.6a2ef227.jpg",
     "static/media/rupaul.png": "/pride-memory-game/static/media/rupaul.f4532d84.png",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.72c8afdf.js",
     "static/js/2.d3ae053b.chunk.js",
-    "static/css/main.f07ce707.chunk.css",
-    "static/js/main.4e0d021d.chunk.js"
+    "static/css/main.8c7b84ec.chunk.css",
+    "static/js/main.8d1c5893.chunk.js"
   ]
 }

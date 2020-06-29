@@ -12,4 +12,5 @@ const Counter = ({count}) => {
         <h2 className={'counter'}><span>{count}</span> <br/> matches</h2>
     );
 }
+
 export default Counter;

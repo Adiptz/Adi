@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3066e2f130e9b003ff68137c5c8f2562",
+    "revision": "ab77229251765f985f9216cdbb618932",
     "url": "/pride-memory-game/index.html"
   },
   {
-    "revision": "62577201dc92ec542029",
-    "url": "/pride-memory-game/static/css/main.f07ce707.chunk.css"
+    "revision": "87af401c6722da3a245d",
+    "url": "/pride-memory-game/static/css/main.8c7b84ec.chunk.css"
   },
   {
     "revision": "c95e65e54e9fbce7aad8",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pride-memory-game/static/js/2.d3ae053b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "62577201dc92ec542029",
-    "url": "/pride-memory-game/static/js/main.4e0d021d.chunk.js"
+    "revision": "87af401c6722da3a245d",
+    "url": "/pride-memory-game/static/js/main.8d1c5893.chunk.js"
   },
   {
     "revision": "22a1a52dcc4e1190ddc0",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pride-memory-game/static/media/ellen.42ac9ccb.jpg"
   },
   {
-    "revision": "dda2e78875fcfe4781e35af87808dea9",
-    "url": "/pride-memory-game/static/media/ofra.dda2e788.webp"
+    "revision": "771c34d9ceba02a6497ca6587edc47f2",
+    "url": "/pride-memory-game/static/media/ofra.771c34d9.jpg"
   },
   {
     "revision": "7c5fbad4e58ef68d0c0a301d7d14f9d5",
