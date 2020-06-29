@@ -30,10 +30,13 @@ const Board = ({handleFindMatch}) => {
 
             if (flippedCards.includes(id)) {
                 handleFindMatch();
+                setMatchingCards([...matchingCards, id]);
+                setFlippedCards([]);
             }
         }
 
         const handleBackFlip = (id) => {
+            if (matchingCards.includes(id)) return
 
             if (countInArray(flippedCards, id) === 2) {
                 setMatchingCards([...matchingCards, id]);
