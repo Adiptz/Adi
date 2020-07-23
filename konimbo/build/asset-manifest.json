@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Konimbo-project/static/css/main.05944ec5.chunk.css",
+    "main.js": "/Konimbo-project/static/js/main.443f8492.chunk.js",
+    "main.js.map": "/Konimbo-project/static/js/main.443f8492.chunk.js.map",
+    "runtime-main.js": "/Konimbo-project/static/js/runtime-main.6a4463d3.js",
+    "runtime-main.js.map": "/Konimbo-project/static/js/runtime-main.6a4463d3.js.map",
+    "static/js/2.5185e6d3.chunk.js": "/Konimbo-project/static/js/2.5185e6d3.chunk.js",
+    "static/js/2.5185e6d3.chunk.js.map": "/Konimbo-project/static/js/2.5185e6d3.chunk.js.map",
+    "index.html": "/Konimbo-project/index.html",
+    "precache-manifest.9f51b9eff898516b218413b150568b04.js": "/Konimbo-project/precache-manifest.9f51b9eff898516b218413b150568b04.js",
+    "service-worker.js": "/Konimbo-project/service-worker.js",
+    "static/css/main.05944ec5.chunk.css.map": "/Konimbo-project/static/css/main.05944ec5.chunk.css.map",
+    "static/js/2.5185e6d3.chunk.js.LICENSE.txt": "/Konimbo-project/static/js/2.5185e6d3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a4463d3.js",
+    "static/js/2.5185e6d3.chunk.js",
+    "static/css/main.05944ec5.chunk.css",
+    "static/js/main.443f8492.chunk.js"
+  ]
+}

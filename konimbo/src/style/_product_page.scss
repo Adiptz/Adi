@@ -1,0 +1,100 @@
+.black-layout {
+  position: fixed;
+  background: rgba(69, 65, 65, 0.65);
+  overflow : hidden;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 3;
+}
+
+.product-page {
+  position: relative;
+  margin: auto;
+  top: 10vh;
+  background: #dfdfe3;
+  width: 800px; height: 70vh;
+  border: solid 4px #333;
+  outline: none;
+  border-radius: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .close-page {
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    height: 20px;
+    position: absolute;
+    top : 2%;
+    right: 2%;
+    color: #e0721d;
+  }
+
+  h1 {
+    padding-top: 2%;
+    color: #e0721d;
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 6%;
+    left: 12%;
+  }
+
+  #main-image {
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    left: 3%; top: 20%;
+    border: solid #fc8845 2px;
+    border-radius: 10px;
+  }
+
+  .gallery-pic{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    border: solid #fc8845 2px;
+    border-radius: 10px;
+  }
+
+
+}
+
+.gallery {
+  display: grid;
+  padding-top: 10px;
+  max-width: 100%;
+  grid-template-columns: auto auto auto;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+}
+
+.product-buttons {
+  position: absolute;
+  bottom: 30px;
+  right: 10%;
+
+  button{
+    outline: none;
+    border: none;
+    background: #333;
+    color: #e0721d;
+    width: 10vw;
+    height: 7vh;
+    border-radius: 5px;
+    margin: 0 auto 0 30px;
+    font-size: large;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1) perspective(1px)
+    }
+
+  }
+}

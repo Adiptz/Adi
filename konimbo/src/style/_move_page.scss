@@ -1,0 +1,26 @@
+.move-page {
+  outline: none;
+  border: none;
+  background: #333;
+  color: #e0721d;
+  width: 10vw;
+  height: 25px;
+  border-radius: 5px;
+  margin: 0 auto 0 30px;
+  font-size: large;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1) perspective(1px)
+  }
+
+}
+
+.nav-buttons {
+  position: relative;
+  bottom: 0;
+  left: auto;
+  margin-top: 20px;
+  justify-content: center;
+}

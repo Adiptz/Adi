@@ -1,0 +1,35 @@
+.products-container{
+  margin-top: 130px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2vw;
+  justify-content: center;
+}
+
+.product {
+  outline: none;
+  border: none;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 20px;
+  position: relative;
+
+  h3 {
+    color: #282c34;
+    padding: 0 14px;
+  }
+
+  img {
+    margin: 30px auto;
+    width: 165px;
+    height: 165px;
+  }
+  &:hover {
+    cursor: pointer;
+    top: -8px;
+    box-shadow: 10px 10px rgba(136, 136, 136, 0.53);
+
+  }
+}
+
+

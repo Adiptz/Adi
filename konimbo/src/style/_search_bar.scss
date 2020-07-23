@@ -1,0 +1,25 @@
+.search-form {
+  position: absolute;
+  top: 8vh;
+  left: 30vw;
+
+  z-index: 3;
+  input {
+    font-family: 'MuseoModerno', cursive;
+    font-size: medium;
+
+    width: 40vw;
+    background: transparent;
+    height: 34px;
+    border: none;
+    outline: none;
+    border-bottom: solid 3px #e0721d;
+    color: white;
+
+    &:focus {
+      color: white;
+    }
+  }
+
+
+}
