@@ -1,0 +1,13 @@
+@import 'header', 'tasks-container', 'number-display', 'footer';
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap");
+
+.App {
+  font-family: 'MuseoModerno', cursive;
+  text-align: center;
+  user-select: none;
+}
+
+body {
+  background: #fff;
+}
+

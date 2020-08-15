@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap");
+.header-purple-cover {
+  width: 100%;
+  min-height: 80px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #321879; }
+
+img {
+  margin-top: 100px; }
+
+.tasks-container {
+  padding-top: 8vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 60vw;
+  margin: auto;
+  align-items: center;
+  justify-items: center; }
+
+h2 {
+  color: #321879;
+  margin-top: 60px; }
+
+.number-display {
+  transition: 0.4s;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  margin: auto;
+  color: white;
+  background: #282c34;
+  font-weight: bolder;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .number-display:hover {
+    transition: 0.3s;
+    cursor: pointer;
+    color: white;
+    background: #321879;
+    width: 105px;
+    border-radius: 5px;
+    font-size: x-large; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #321879; }
+
+.App {
+  font-family: 'MuseoModerno', cursive;
+  text-align: center;
+  user-select: none; }
+
+body {
+  background: #fff; }
+
+/*# sourceMappingURL=main.css.map */

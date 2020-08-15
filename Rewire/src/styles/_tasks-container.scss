@@ -1,0 +1,14 @@
+.tasks-container {
+  padding-top: 8vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 60vw;
+  margin: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+h2 {
+  color: rgb(50, 24, 121);
+  margin-top: 60px;
+}
