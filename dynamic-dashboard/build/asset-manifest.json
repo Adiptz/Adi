@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Dynamic-Dashboard/static/css/main.aad6c56e.chunk.css",
+    "main.js": "/Dynamic-Dashboard/static/js/main.bbc95c0c.chunk.js",
+    "main.js.map": "/Dynamic-Dashboard/static/js/main.bbc95c0c.chunk.js.map",
+    "runtime-main.js": "/Dynamic-Dashboard/static/js/runtime-main.14bb59ab.js",
+    "runtime-main.js.map": "/Dynamic-Dashboard/static/js/runtime-main.14bb59ab.js.map",
+    "static/js/2.8be5e366.chunk.js": "/Dynamic-Dashboard/static/js/2.8be5e366.chunk.js",
+    "static/js/2.8be5e366.chunk.js.map": "/Dynamic-Dashboard/static/js/2.8be5e366.chunk.js.map",
+    "index.html": "/Dynamic-Dashboard/index.html",
+    "precache-manifest.c45729696c9cd8ce774c4b155a074826.js": "/Dynamic-Dashboard/precache-manifest.c45729696c9cd8ce774c4b155a074826.js",
+    "service-worker.js": "/Dynamic-Dashboard/service-worker.js",
+    "static/css/main.aad6c56e.chunk.css.map": "/Dynamic-Dashboard/static/css/main.aad6c56e.chunk.css.map",
+    "static/js/2.8be5e366.chunk.js.LICENSE.txt": "/Dynamic-Dashboard/static/js/2.8be5e366.chunk.js.LICENSE.txt",
+    "static/media/Germany.jpg": "/Dynamic-Dashboard/static/media/Germany.e338c92b.jpg",
+    "static/media/Italy.jpg": "/Dynamic-Dashboard/static/media/Italy.68d5c82c.jpg",
+    "static/media/Japan.jpg": "/Dynamic-Dashboard/static/media/Japan.106fb4c2.jpg",
+    "static/media/logo-OECD.svg.png": "/Dynamic-Dashboard/static/media/logo-OECD.svg.5637e3f1.png",
+    "static/media/oecd-worldmap.svg": "/Dynamic-Dashboard/static/media/oecd-worldmap.88be8884.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14bb59ab.js",
+    "static/js/2.8be5e366.chunk.js",
+    "static/css/main.aad6c56e.chunk.css",
+    "static/js/main.bbc95c0c.chunk.js"
+  ]
+}

@@ -1,0 +1,27 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background: rgb(63, 62, 62);
+  z-index: 1;
+}
+
+.logo-OECD {
+  height: 7vh;
+  position: absolute;
+  left: 20px;
+}
+.nav-links {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  color: #5a9ef9;
+  text-decoration: underline;
+  font-size: large;
+}
