@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f5a4142-afa0-4b80-8c48-67e66f1db776" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/waterJugs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/waterJugsFinal.js" beforeDir="false" afterPath="$PROJECT_DIR$/waterJugsFinal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/waterJugsFinal.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,19 +40,19 @@
       <recent name="$USER_HOME$/Desktop" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.waterJugsFinal.js">
+  <component name="RunManager" selected="Node.js.waterJugs.js">
     <configuration name="diffArray.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/diffArray.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="removeDuplicates.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/removeDuplicates.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="waterJugsFinal.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/waterJugsFinal.js" working-dir="$PROJECT_DIR$">
+    <configuration name="waterJugs.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/waterJugs.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.waterJugsFinal.js" />
+        <item itemvalue="Node.js.waterJugs.js" />
         <item itemvalue="Node.js.diffArray.js" />
         <item itemvalue="Node.js.removeDuplicates.js" />
       </list>
@@ -65,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597834833679</updated>
       <workItem from="1597834834740" duration="6752000" />
-      <workItem from="1598690897884" duration="10792000" />
+      <workItem from="1598690897884" duration="19081000" />
     </task>
     <servers />
   </component>
@@ -73,30 +75,38 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="618" y="220" width="740" height="665" key="#Inspections" timestamp="1598713936650">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state x="618" y="220" width="740" height="665" key="#Inspections/67.27.1853.2133@67.27.1853.2133" timestamp="1598713936650" />
     <state x="718" y="236" width="530" height="633" key="FileChooserDialogImpl" timestamp="1598702678881">
       <screen x="67" y="27" width="1853" height="2133" />
     </state>
     <state x="718" y="236" width="530" height="633" key="FileChooserDialogImpl/67.27.1853.2133@67.27.1853.2133" timestamp="1598702678881" />
-    <state width="1892" height="283" key="GridCell.Tab.0.bottom" timestamp="1598708178580">
-      <screen x="67" y="27" width="1853" height="2133" />
+    <state width="1825" height="284" key="GridCell.Tab.0.bottom" timestamp="1598719929000">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1825" height="251" key="GridCell.Tab.0.bottom/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
-    <state width="1892" height="283" key="GridCell.Tab.0.bottom/67.27.1853.2133@67.27.1853.2133" timestamp="1598708178580" />
-    <state width="1892" height="283" key="GridCell.Tab.0.center" timestamp="1598708178578">
-      <screen x="67" y="27" width="1853" height="2133" />
+    <state width="1825" height="284" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1598719929000" />
+    <state width="1825" height="293" key="GridCell.Tab.0.bottom/67.27.1853.2133@67.27.1853.2133" timestamp="1598714442083" />
+    <state width="1825" height="284" key="GridCell.Tab.0.center" timestamp="1598719928999">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1825" height="251" key="GridCell.Tab.0.center/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
-    <state width="1892" height="283" key="GridCell.Tab.0.center/67.27.1853.2133@67.27.1853.2133" timestamp="1598708178578" />
-    <state width="1892" height="283" key="GridCell.Tab.0.left" timestamp="1598708178577">
-      <screen x="67" y="27" width="1853" height="2133" />
+    <state width="1825" height="284" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1598719928999" />
+    <state width="1825" height="293" key="GridCell.Tab.0.center/67.27.1853.2133@67.27.1853.2133" timestamp="1598714442081" />
+    <state width="1825" height="284" key="GridCell.Tab.0.left" timestamp="1598719928999">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1825" height="251" key="GridCell.Tab.0.left/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
-    <state width="1892" height="283" key="GridCell.Tab.0.left/67.27.1853.2133@67.27.1853.2133" timestamp="1598708178577" />
-    <state width="1892" height="283" key="GridCell.Tab.0.right" timestamp="1598708178579">
-      <screen x="67" y="27" width="1853" height="2133" />
+    <state width="1825" height="284" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1598719928999" />
+    <state width="1825" height="293" key="GridCell.Tab.0.left/67.27.1853.2133@67.27.1853.2133" timestamp="1598714442080" />
+    <state width="1825" height="284" key="GridCell.Tab.0.right" timestamp="1598719928999">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state width="1825" height="251" key="GridCell.Tab.0.right/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
-    <state width="1892" height="283" key="GridCell.Tab.0.right/67.27.1853.2133@67.27.1853.2133" timestamp="1598708178579" />
+    <state width="1825" height="284" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1598719928999" />
+    <state width="1825" height="293" key="GridCell.Tab.0.right/67.27.1853.2133@67.27.1853.2133" timestamp="1598714442083" />
     <state x="167" y="51" width="1488" height="1029" key="dock-window-1" timestamp="1598691973205">
       <screen x="67" y="27" width="1853" height="2133" />
     </state>
