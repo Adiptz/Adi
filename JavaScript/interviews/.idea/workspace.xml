@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f5a4142-afa0-4b80-8c48-67e66f1db776" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1gJZomZq2P01cd6fP39Nl7I5Ssd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Node.js.waterJugsFinal.js">
+    <configuration name="diffArray.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/diffArray.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="removeDuplicates.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/removeDuplicates.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="waterJugsFinal.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/waterJugsFinal.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.waterJugsFinal.js" />
+        <item itemvalue="Node.js.diffArray.js" />
+        <item itemvalue="Node.js.removeDuplicates.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f5a4142-afa0-4b80-8c48-67e66f1db776" name="Default Changelist" comment="" />
+      <created>1597834833679</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597834833679</updated>
+      <workItem from="1597834834740" duration="6752000" />
+      <workItem from="1598690897884" duration="9627000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1892" height="117" key="GridCell.Tab.0.bottom" timestamp="1598702489414">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state width="1825" height="251" key="GridCell.Tab.0.bottom/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
+    <state width="1892" height="117" key="GridCell.Tab.0.bottom/67.27.1853.2133@67.27.1853.2133" timestamp="1598702489414" />
+    <state width="1892" height="117" key="GridCell.Tab.0.center" timestamp="1598702489413">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state width="1825" height="251" key="GridCell.Tab.0.center/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
+    <state width="1892" height="117" key="GridCell.Tab.0.center/67.27.1853.2133@67.27.1853.2133" timestamp="1598702489413" />
+    <state width="1892" height="117" key="GridCell.Tab.0.left" timestamp="1598702489413">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state width="1825" height="251" key="GridCell.Tab.0.left/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
+    <state width="1892" height="117" key="GridCell.Tab.0.left/67.27.1853.2133@67.27.1853.2133" timestamp="1598702489413" />
+    <state width="1892" height="117" key="GridCell.Tab.0.right" timestamp="1598702489414">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state width="1825" height="251" key="GridCell.Tab.0.right/67.27.1853.1053/0.1080.1920.1080@67.27.1853.1053" timestamp="1598355046068" />
+    <state width="1892" height="117" key="GridCell.Tab.0.right/67.27.1853.2133@67.27.1853.2133" timestamp="1598702489414" />
+    <state x="167" y="51" width="1488" height="1029" key="dock-window-1" timestamp="1598691973205">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state x="167" y="51" width="1488" height="1029" key="dock-window-1/67.27.1853.2133@67.27.1853.2133" timestamp="1598691973205" />
+    <state x="277" y="27" width="1488" height="1029" maximized="true" key="dock-window-2" timestamp="1598699129324">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state x="277" y="27" width="1488" height="1029" maximized="true" key="dock-window-2/67.27.1853.2133@67.27.1853.2133" timestamp="1598699129324" />
+    <state x="572" y="63" width="840" height="2095" key="search.everywhere.popup" timestamp="1598699700487">
+      <screen x="67" y="27" width="1853" height="2133" />
+    </state>
+    <state x="572" y="45" width="840" height="1034" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1598690947037" />
+    <state x="572" y="63" width="840" height="2095" key="search.everywhere.popup/67.27.1853.2133@67.27.1853.2133" timestamp="1598699700487" />
+  </component>
+</project>
