@@ -1,29 +1,28 @@
-const exampleJugs = [{id: 1, capacity: 8, filed: 8},
-    {id: 2, capacity: 5, filed: 0},
-    {id: 3, capacity: 3, filed: 0}];
+const exampleJugs = [{id: 1, capacity: 12, filed: 12},
+                     {id: 2, capacity: 8, filed: 0},
+                     {id: 3, capacity: 5, filed: 0}];
 
 function getStepsWaterJugs(jugs, literToMeasure) {
     let answer = [];
     const stepsVisited = {};
 
     recursiveGetSteps(jugs, literToMeasure, answer, stepsVisited);
-    return answer.reverse();
+
+    return answer.reverse(); // backtrack solution
 }
 
 function recursiveGetSteps(jugs, literToMeasure, answer, stepsVisited) {
-    console.log(jugs);
-
     const jug1 = jugs[0];
     const jug2 = jugs[1];
     const jug3 = jugs[2];
 
     const currentStep = [jug1.filed, jug2.filed, jug3.filed];
-    // console.log(currentStep);
+
     // got the desired measurement
     if (jug1.filed === literToMeasure || jug2.filed === literToMeasure || jug3.filed === literToMeasure) return true;
 
     // already been in this state
-    if (stepsVisited[currentStep] === 1) return false;
+    if (stepsVisited[currentStep]) return false;
 
     console.log('im here');
     stepsVisited[currentStep] = 1;
@@ -168,4 +167,5 @@ function recursiveGetSteps(jugs, literToMeasure, answer, stepsVisited) {
     return false;
 }
 
-console.log(getStepsWaterJugs(exampleJugs, 1));
+const result = getStepsWaterJugs(exampleJugs, 6);
+console.log(result);
